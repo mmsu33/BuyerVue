@@ -36,7 +36,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:60px;d
 .nav-links a:hover{color:var(--text)}
 .nav-cta{background:var(--accent);color:#000;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:600;border:none;cursor:pointer;font-family:var(--font-body)}
 .page{min-height:100vh;padding-top:60px}
-/* HOME */
 .hero{padding:100px 40px 80px;max-width:1200px;margin:0 auto;width:100%}
 .hero-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite;display:inline-block;margin-right:8px}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.3)}}
@@ -81,7 +80,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:60px;d
 .company-card-footer{display:flex;align-items:center;justify-content:space-between}
 .card-tags{display:flex;gap:6px;flex-wrap:wrap}
 .survey-count{font-size:11px;color:var(--text3);font-family:var(--font-mono)}
-/* COMPANY PROFILE */
 .profile-hero{background:var(--bg2);border-bottom:1px solid var(--border);padding:48px 40px 36px}
 .profile-hero-inner{max-width:1200px;margin:0 auto}
 .back-btn{display:flex;align-items:center;gap:6px;color:var(--text2);font-size:13px;cursor:pointer;margin-bottom:28px;background:none;border:none;font-family:var(--font-body)}
@@ -103,7 +101,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:60px;d
 .gate-step{display:flex;flex-direction:column;align-items:center;gap:8px}
 .gate-step-num{width:36px;height:36px;border-radius:50%;border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:13px;color:var(--accent)}
 .gate-step-label{font-size:12px;color:var(--text2);text-align:center;max-width:100px}
-.intel-grid{display:grid;grid-template-columns:2fr 1fr;gap:20px;padding:32px 40px;max-width:1200px;margin:0 auto}
 .intel-panel{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:20px}
 .intel-panel-title{font-family:var(--font-head);font-size:16px;font-weight:700;color:var(--text);margin-bottom:4px}
 .intel-panel-sub{font-size:12px;color:var(--text3);font-family:var(--font-mono);margin-bottom:20px}
@@ -136,7 +133,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:60px;d
 .review-meta{font-size:11px;color:var(--text3);font-family:var(--font-mono)}
 .review-text{font-size:13px;color:var(--text2);line-height:1.6}
 .review-tags{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
-/* SURVEY */
 .survey-layout{display:grid;grid-template-columns:260px 1fr;min-height:calc(100vh - 60px)}
 .survey-sidebar{background:var(--bg2);border-right:1px solid var(--border);padding:32px 24px;position:sticky;top:60px;height:calc(100vh - 60px);overflow-y:auto}
 .survey-sidebar-title{font-family:var(--font-head);font-size:16px;font-weight:700;color:var(--text);margin-bottom:4px}
@@ -178,7 +174,7 @@ textarea.form-input{resize:vertical;min-height:90px}
 .form-actions{display:flex;align-items:center;justify-content:space-between;margin-top:40px;padding-top:28px;border-top:1px solid var(--border)}
 .btn-back{background:none;border:1px solid var(--border2);color:var(--text2);padding:12px 22px;border-radius:8px;font-size:14px;cursor:pointer;font-family:var(--font-body)}
 .btn-next{background:var(--accent);color:#000;padding:12px 28px;border-radius:8px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:var(--font-body)}
-/* SUCCESS */
+.btn-next:disabled{opacity:0.5;cursor:not-allowed}
 .success-wrap{display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 60px);padding:40px}
 .success-inner{max-width:520px;text-align:center}
 .success-icon{width:72px;height:72px;border-radius:50%;border:2px solid var(--accent);background:var(--accent-bg);display:flex;align-items:center;justify-content:center;margin:0 auto 28px;font-size:28px}
@@ -188,7 +184,6 @@ textarea.form-input{resize:vertical;min-height:90px}
 .unlocked-title{font-size:11px;font-family:var(--font-mono);color:var(--accent);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px}
 .unlocked-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2);margin-bottom:6px}
 .unlocked-check{color:var(--accent)}
-/* Q&A section */
 .qa-section{max-width:1200px;margin:0 auto;padding:0 40px 48px}
 .qa-panel{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px}
 .qa-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;flex-wrap:wrap;gap:12px}
@@ -223,11 +218,7 @@ textarea.form-input{resize:vertical;min-height:90px}
 .access-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:20px;font-size:11px;font-family:var(--font-mono);font-weight:600}
 .access-active{background:var(--accent-bg);color:var(--accent);border:1px solid rgba(0,229,160,0.2)}
 .access-expired{background:var(--red-bg);color:var(--red);border:1px solid rgba(255,95,95,0.2)}
-@media(max-width:768px){
-  .qa-section{padding:0 20px 40px}
-  .qa-panel{padding:20px 16px}
-  .qa-header{flex-direction:column;align-items:flex-start}
-}
+.error-msg{background:var(--red-bg);border:1px solid var(--red);border-radius:8px;padding:12px 16px;font-size:13px;color:var(--red);margin-bottom:16px;display:none}
 .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;background:none;border:none;cursor:pointer;padding:4px}
 .hamburger span{display:block;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s}
 .mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;background:rgba(7,8,12,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:99;padding:16px 20px;flex-direction:column;gap:4px}
@@ -243,36 +234,25 @@ textarea.form-input{resize:vertical;min-height:90px}
 .lb-score-label{font-size:10px;color:var(--text3);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:2px}
 .lb-score-val{font-family:var(--font-mono);font-size:16px;font-weight:600}
 @media(max-width:768px){
-  .nav-links{display:none}
-  .nav-cta{display:none}
-  .hamburger{display:flex}
+  .nav-links{display:none}.nav-cta{display:none}.hamburger{display:flex}
   .profile-score-grid{grid-template-columns:repeat(2,1fr)}
-  .intel-grid{grid-template-columns:1fr}
-  .survey-layout{grid-template-columns:1fr}
-  .survey-sidebar{display:none}
+  .survey-layout{grid-template-columns:1fr}.survey-sidebar{display:none}
   .survey-content{padding:28px 20px}
-  .hero h1{font-size:34px}
-  .hero{padding:72px 20px 48px}
-  .hero p{font-size:16px}
-  .hero-stats{gap:24px}
-  .hero-stat-num{font-size:26px}
-  .search-section{padding:24px 20px}
-  .companies-section{padding:32px 20px}
+  .hero h1{font-size:34px}.hero{padding:72px 20px 48px}.hero p{font-size:16px}
+  .hero-stats{gap:24px}.hero-stat-num{font-size:26px}
+  .search-section{padding:24px 20px}.companies-section{padding:32px 20px}
   .company-grid{grid-template-columns:1fr}
-  .profile-hero{padding:32px 20px 24px}
-  .profile-meta h2{font-size:24px}
+  .profile-hero{padding:32px 20px 24px}.profile-meta h2{font-size:24px}
   nav{padding:0 20px}
-  .form-input{font-size:16px;padding:14px}
-  .radio-item{padding:14px}
+  .form-input{font-size:16px;padding:14px}.radio-item{padding:14px}
   .btn-primary,.btn-outline,.btn-next,.btn-back{padding:14px 20px;font-size:15px}
-  .gate-box{padding:32px 20px;margin:20px}
-  .gate-steps{gap:16px}
-  .lb-table{display:none}
-  .lb-card{display:block}
-  .step-title{font-size:22px}
-  .success-wrap{padding:24px 20px}
-  .success-inner h2{font-size:28px}
+  .gate-box{padding:32px 20px;margin:20px}.gate-steps{gap:16px}
+  .lb-table{display:none}.lb-card{display:block}
+  .step-title{font-size:22px}.success-wrap{padding:24px 20px}.success-inner h2{font-size:28px}
   .intel-panel{padding:18px 16px}
+  .qa-section{padding:0 20px 40px}.qa-panel{padding:20px 16px}
+  .qa-header{flex-direction:column;align-items:flex-start}
+  .scale-group{flex-wrap:wrap}.scale-btn{min-width:40px;flex:none}
 }
 </style>
 </head>
@@ -315,7 +295,6 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div><div class="hero-stat-num">14d</div><div class="hero-stat-label">Avg Legal Cycle Tracked</div></div>
     </div>
   </div>
-
   <div id="search-anchor" class="search-section">
     <div class="search-inner">
       <div class="search-bar">
@@ -333,7 +312,6 @@ textarea.form-input{resize:vertical;min-height:90px}
       </div>
     </div>
   </div>
-
   <div class="companies-section">
     <div class="section-header">
       <div class="section-title">Most Searched Companies</div>
@@ -362,7 +340,6 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="profile-score-grid" id="profileScoreGrid"></div>
     </div>
   </div>
-
   <div id="profileGated">
     <div class="gate-box">
       <span class="tag tag-amber" style="margin-bottom:16px;display:inline-flex">Intelligence Locked</span>
@@ -377,7 +354,6 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div style="margin-top:14px;font-size:12px;color:var(--text3)">Or <a href="#" style="color:var(--accent);text-decoration:none" onclick="unlockProfile();return false;">preview with limited data</a> &nbsp;&middot;&nbsp; <a href="#" style="color:var(--blue);text-decoration:none" onclick="simulateAccess();unlockProfile();return false;">demo with full 14-day access</a></div>
     </div>
   </div>
-
   <div id="profileUnlocked" style="display:none">
     <div style="display:grid;grid-template-columns:2fr 1fr;gap:20px;padding:32px 40px;max-width:1200px;margin:0 auto">
       <div>
@@ -391,52 +367,35 @@ textarea.form-input{resize:vertical;min-height:90px}
         <div class="intel-panel" id="panelQuick"></div>
       </div>
     </div>
-
-    <!-- Q&A SECTION -->
     <div class="qa-section">
       <div class="qa-panel">
         <div class="qa-header">
-          <div>
-            <div class="qa-title">&#9670; Ask the Community</div>
-            <div class="qa-sub">Questions answered by verified reps who have sold into this account</div>
-          </div>
+          <div><div class="qa-title">&#9670; Ask the Community</div><div class="qa-sub">Questions answered by verified reps who have sold into this account</div></div>
           <div id="accessBadge"></div>
         </div>
-
-        <!-- Ask a question box — shown only to users in 14-day window -->
         <div id="qaAskBox" style="display:none">
           <div class="qa-ask-box">
-            <textarea id="qaInput" placeholder="Ask something specific — e.g. Does their legal team accept liability caps under $1M? Is the CISO typically involved in software purchases?"></textarea>
+            <textarea id="qaInput" placeholder="Ask something specific — e.g. Does their legal team accept liability caps under $1M?"></textarea>
             <div class="qa-ask-footer">
               <span class="qa-ask-hint">Your question will be visible publicly. Answers are locked behind survey submission.</span>
               <button class="btn-sm" onclick="submitQuestion()">Post Question</button>
             </div>
           </div>
         </div>
-
-        <!-- Ask box locked state — shown to users outside window -->
         <div id="qaAskLocked" style="display:none">
           <div style="background:var(--bg3);border:1px dashed var(--border2);border-radius:10px;padding:16px;margin-bottom:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
-            <div>
-              <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:3px">Want to ask a question?</div>
-              <div style="font-size:12px;color:var(--text3)">Submit a survey to get 14 days of full access including the ability to ask questions.</div>
-            </div>
+            <div><div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:3px">Want to ask a question?</div><div style="font-size:12px;color:var(--text3)">Submit a survey to get 14 days of full access.</div></div>
             <button class="btn-sm" onclick="showPage('survey')">Submit a Survey</button>
           </div>
         </div>
-
-        <!-- Questions list -->
         <div id="qaList"></div>
-
-        <!-- Answers locked prompt — shown below questions for non-window users -->
         <div id="qaAnswersGate" style="display:none">
           <div class="qa-locked">
             <div class="qa-locked-title">&#128274; Answers are locked</div>
-            <div class="qa-locked-sub">Submit a deal experience to unlock 14 days of full access — including all community answers, company intel, and the ability to ask your own questions.</div>
+            <div class="qa-locked-sub">Submit a deal experience to unlock 14 days of full access.</div>
             <button class="btn-primary" onclick="showPage('survey')">Submit a Survey to Unlock</button>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -451,7 +410,8 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div id="surveySteps"></div>
     </div>
     <div class="survey-content">
-      <div class="prog-bar"><div class="prog-fill" id="progFill" style="width:20%"></div></div>
+      <div class="prog-bar"><div class="prog-fill" id="progFill" style="width:14%"></div></div>
+      <div id="errorMsg" class="error-msg"></div>
       <div id="surveyBody"></div>
     </div>
   </div>
@@ -463,7 +423,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <div style="margin-bottom:40px">
       <div style="font-family:var(--font-mono);font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px">Rankings</div>
       <h1 style="font-family:var(--font-head);font-size:48px;font-weight:800;letter-spacing:-0.03em;color:var(--text);margin-bottom:12px">Top Rated Companies</h1>
-      <p style="font-size:16px;color:var(--text2);max-width:560px">Ranked by overall procurement ease score based on verified rep submissions. Higher score means a smoother buying process.</p>
+      <p style="font-size:16px;color:var(--text2);max-width:560px">Ranked by overall procurement ease score based on verified rep submissions.</p>
     </div>
     <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden">
       <div class="lb-table" style="display:grid;grid-template-columns:48px 1fr repeat(4,100px) 80px;padding:12px 24px;border-bottom:1px solid var(--border);font-size:10px;font-family:var(--font-mono);color:var(--text3);text-transform:uppercase;letter-spacing:0.06em;gap:8px">
@@ -512,218 +472,256 @@ textarea.form-input{resize:vertical;min-height:90px}
 
 <script>
 var companies = [
-  {id:0,name:"Salesforce",ticker:"CRM",industry:"Technology",size:"10,000+",segment:"enterprise",surveys:247,logo:"SF",color:"#00e5a0",
-   scores:{decision:7.8,legal:5.2,budget:8.1,complexity:7.4},tags:["enterprise","technology"],
-   stakeholders:[
-     {initials:"VP",role:"VP of IT / CIO",title:"Final signature authority for all tech over $50K",power:5,color:"#00e5a0"},
-     {initials:"CFO",role:"Finance / CFO",title:"Required for anything over $250K or multi-year",power:4,color:"#f5a623"},
-     {initials:"PR",role:"Procurement",title:"Runs vendor scoring and gets involved early",power:3,color:"#4d9ef7"},
-     {initials:"GC",role:"Legal / GC",title:"Reviews all paper, separate from procurement",power:3,color:"#b06bff"}
-   ],
-   legalStrict:72,legalFacts:[{label:"Avg redline rounds",value:"3.2 rounds avg"},{label:"Preferred paper",value:"Insists on their MSA"},{label:"DPA required",value:"Yes, always"}],
-   redlineNotes:["Budget approval and legal run in parallel. Start both at the same time.","DPA must be finalized before they countersign. Budget extra time.","Legal team is responsive Mon-Wed, slow Thu-Fri."],
-   timeline:[{stage:"First meeting",desc:"Initial discovery call",time:"Day 1"},{stage:"Technical review",desc:"IT and security eval, avg 3 weeks",time:"Week 2-4"},{stage:"Procurement entry",desc:"Formal vendor registration",time:"Week 4"},{stage:"Legal review",desc:"MSA plus DPA, 2-4 rounds",time:"Week 5-8"},{stage:"Exec sign-off",desc:"VP or above signs",time:"Week 9"}],
-   budget:[{m:"Jan",p:20},{m:"Feb",p:15},{m:"Mar",p:35},{m:"Apr",p:25},{m:"May",p:20},{m:"Jun",p:40},{m:"Jul",p:18},{m:"Aug",p:22},{m:"Sep",p:38},{m:"Oct",p:30},{m:"Nov",p:45},{m:"Dec",p:85}],
-   fiscalYearEnd:"January 31",outOfCycle:"Yes, with VP+ approval",spendAreas:"Security, Data, GTM Tooling",
-   quickIntel:[{label:"Champion needed",value:"Yes. Must have exec sponsor or deal dies."},{label:"POC required",value:"Usually yes. 30-60 day eval standard."},{label:"Avg sales cycle",value:"60-120 days for enterprise."},{label:"Watch out",value:"Procurement and legal run on separate tracks."}],
-   reviews:[{role:"Enterprise AE",size:"$340K",date:"3 weeks ago",text:"Navigating their IT security review is the longest part. Start the vendor questionnaire on day one. Their InfoSec team asks for SOC 2 Type II, pen tests, GDPR docs, and a full architecture review before anyone looks at the contract.",tags:["tag-amber","tag-blue"],labels:["Security blocker","Slow IT"]},{role:"Strategic AE",size:"$180K",date:"2 months ago",text:"Their procurement team is aggressive on pricing. Expect to give 15-20% off if they bring in a competing bid. If your champion is strong the ROI story can help bypass the full RFP process.",tags:["tag-red","tag-amber"],labels:["Pricing pressure","RFP risk"]}]
-  },
-  {id:1,name:"JPMorgan Chase",ticker:"JPM",industry:"Financial Services",size:"10,000+",segment:"enterprise",surveys:189,logo:"JP",color:"#4d9ef7",
-   scores:{decision:6.2,legal:3.1,budget:7.0,complexity:4.8},tags:["enterprise","finance"],
-   stakeholders:[
-     {initials:"GC",role:"Legal / GC",title:"Controls all vendor contracts, inflexible on MSA",power:5,color:"#f5a623"},
-     {initials:"CTO",role:"CTO / Tech Leadership",title:"Technology buying authority",power:4,color:"#4d9ef7"},
-     {initials:"CO",role:"Compliance Officer",title:"Must sign off on data handling",power:4,color:"#ff5f5f"},
-     {initials:"PR",role:"Sourcing / Procurement",title:"Runs RFP and vendor scoring process",power:3,color:"#b06bff"}
-   ],
-   legalStrict:91,legalFacts:[{label:"Avg redline rounds",value:"5-7 rounds"},{label:"Preferred paper",value:"Must use their paper"},{label:"Reg compliance",value:"FINRA, SOX, GDPR required"}],
-   redlineNotes:["Get your legal team aligned to their paper early. You will not win on your paper.","Compliance review is separate and can add 4-6 weeks minimum.","Expect a TPRM audit before signing."],
-   timeline:[{stage:"Vendor registration",desc:"Must be registered before any RFP",time:"Week 1"},{stage:"Security review",desc:"TPRM plus penetration test",time:"Week 2-6"},{stage:"RFP scoring",desc:"Formal vendor evaluation",time:"Week 6-10"},{stage:"Legal redlines",desc:"On their paper, 5+ rounds",time:"Week 10-20"},{stage:"Final approval",desc:"Senior leadership sign-off",time:"Week 20-24"}],
-   budget:[{m:"Jan",p:30},{m:"Feb",p:30},{m:"Mar",p:55},{m:"Apr",p:25},{m:"May",p:20},{m:"Jun",p:60},{m:"Jul",p:20},{m:"Aug",p:25},{m:"Sep",p:50},{m:"Oct",p:30},{m:"Nov",p:40},{m:"Dec",p:70}],
-   fiscalYearEnd:"December 31",outOfCycle:"Rare, requires MD+ approval",spendAreas:"Cybersecurity, Compliance, Cloud Infrastructure",
-   quickIntel:[{label:"Entry point",value:"Work through IT or a specific LOB, not central IT."},{label:"POC process",value:"POC rarely happens. Expect lengthy RFP instead."},{label:"Avg sales cycle",value:"6-18 months for meaningful contracts."},{label:"Key challenge",value:"FINRA and SOX compliance add months."}],
-   reviews:[{role:"Enterprise AE",size:"$1.2M TCV",date:"1 month ago",text:"Start the TPRM process before you even demo. Their third-party risk team runs independently from procurement and can hold up a deal for 3 months on its own. Get a security liaison assigned early.",tags:["tag-red","tag-amber"],labels:["TPRM blocker","Long cycle"]}]
-  },
-  {id:2,name:"HubSpot",ticker:"HUBS",industry:"Technology",size:"5,000-10,000",segment:"mid-market",surveys:312,logo:"HS",color:"#f5a623",
-   scores:{decision:8.9,legal:8.2,budget:7.8,complexity:8.6},tags:["mid-market","technology"],
-   stakeholders:[
-     {initials:"VP",role:"VP of Revenue / CRO",title:"Primary buying authority for most tools",power:5,color:"#f5a623"},
-     {initials:"FIN",role:"Finance",title:"Involved on multi-year or over $100K",power:3,color:"#4d9ef7"},
-     {initials:"IT",role:"IT",title:"Light technical review, rarely a blocker",power:2,color:"#00e5a0"}
-   ],
-   legalStrict:28,legalFacts:[{label:"Avg redline rounds",value:"1-2 rounds typical"},{label:"Preferred paper",value:"Usually accepts vendor paper"},{label:"DPA",value:"Straightforward standard addendum"}],
-   redlineNotes:["Very pragmatic on legal. They want to close quickly.","Standard DPA is almost always accepted.","Finance may negotiate payment terms on larger deals."],
-   timeline:[{stage:"Discovery",desc:"Usually 1-2 calls",time:"Week 1"},{stage:"Demo / POC",desc:"Quick eval, 1-2 weeks",time:"Week 2-3"},{stage:"Proposal",desc:"Decision usually same week",time:"Week 3-4"},{stage:"Legal",desc:"Often waived for smaller deals",time:"Week 4-5"},{stage:"Signature",desc:"DocuSign, same day typically",time:"Week 5"}],
-   budget:[{m:"Jan",p:55},{m:"Feb",p:50},{m:"Mar",p:70},{m:"Apr",p:55},{m:"May",p:50},{m:"Jun",p:80},{m:"Jul",p:45},{m:"Aug",p:48},{m:"Sep",p:65},{m:"Oct",p:55},{m:"Nov",p:60},{m:"Dec",p:90}],
-   fiscalYearEnd:"December 31",outOfCycle:"Yes, very willing to spend when value is clear",spendAreas:"Sales Tools, Marketing, Analytics, AI",
-   quickIntel:[{label:"Decision speed",value:"Often same-week decisions from VP level."},{label:"Best entry",value:"CRO / VP Revenue controls budget."},{label:"POC",value:"Short POC usually welcomed, 1 week."},{label:"Avg cycle",value:"2-4 weeks for mid-market tools."}],
-   reviews:[{role:"AE",size:"$48K",date:"1 week ago",text:"Easiest company I have sold to in years. The CRO came to the second call with a decision ready. Legal took 3 days. Payment terms were the only real negotiation.",tags:["tag-green","tag-green"],labels:["Fast close","Smooth legal"]}]
-  },
-  {id:3,name:"General Motors",ticker:"GM",industry:"Manufacturing",size:"10,000+",segment:"enterprise",surveys:94,logo:"GM",color:"#b06bff",
-   scores:{decision:5.4,legal:4.0,budget:5.8,complexity:4.2},tags:["enterprise","manufacturing"],
-   stakeholders:[
-     {initials:"CPO",role:"Chief Procurement Officer",title:"Central procurement owns all vendor decisions",power:5,color:"#b06bff"},
-     {initials:"BU",role:"Business Unit VP",title:"Sponsor required but procurement still controls",power:3,color:"#4d9ef7"},
-     {initials:"IT",role:"IT Architecture",title:"Tech review required for any software",power:3,color:"#00e5a0"}
-   ],
-   legalStrict:78,legalFacts:[{label:"Redline rounds",value:"4-6 rounds average"},{label:"Paper",value:"Uses their standard supplier agreement"},{label:"Insurance req.",value:"High insurance minimums required"}],
-   redlineNotes:["Get on the preferred supplier registry before pursuing a deal.","Their supplier agreement has high insurance minimums.","Budget for a dedicated internal champion or deals get lost in procurement."],
-   timeline:[{stage:"Supplier registration",desc:"Must be in their system first",time:"Month 1"},{stage:"RFQ / RFP",desc:"Formal sourcing process mandatory",time:"Month 2-3"},{stage:"Business case",desc:"ROI submission to CPO",time:"Month 3-4"},{stage:"Legal and insurance",desc:"Supplier agreement plus insurance review",time:"Month 4-6"},{stage:"PO issuance",desc:"Purchase order before any work begins",time:"Month 6+"}],
-   budget:[{m:"Jan",p:20},{m:"Feb",p:25},{m:"Mar",p:30},{m:"Apr",p:55},{m:"May",p:40},{m:"Jun",p:35},{m:"Jul",p:20},{m:"Aug",p:25},{m:"Sep",p:45},{m:"Oct",p:60},{m:"Nov",p:50},{m:"Dec",p:40}],
-   fiscalYearEnd:"December 31",outOfCycle:"No, strict annual budget process",spendAreas:"Manufacturing Tech, EV / Automation, Supply Chain",
-   quickIntel:[{label:"Must have",value:"Preferred supplier status before deal can close."},{label:"Key relationship",value:"CPO office controls all. Exec sponsor is critical."},{label:"Avg cycle",value:"6-18 months is normal."},{label:"Watch out",value:"High insurance minimums. Check early."}],
-   reviews:[{role:"Enterprise AE",size:"$2.1M TCV",date:"2 months ago",text:"Get on the preferred supplier list before you do anything else. I spent 6 months pursuing a deal only to find out we were not registered as a supplier. The CPO office runs everything.",tags:["tag-red","tag-amber"],labels:["Long cycle","Procurement heavy"]}]
-  },
-  {id:4,name:"Stripe",ticker:"STRP",industry:"Technology",size:"5,000-10,000",segment:"mid-market",surveys:156,logo:"ST",color:"#00e5a0",
-   scores:{decision:8.2,legal:7.1,budget:8.4,complexity:7.9},tags:["mid-market","technology"],
-   stakeholders:[
-     {initials:"ENG",role:"Engineering / CTO",title:"Primary authority for infrastructure tools",power:5,color:"#00e5a0"},
-     {initials:"FIN",role:"Finance",title:"Budget approval on contracts",power:3,color:"#4d9ef7"}
-   ],
-   legalStrict:35,legalFacts:[{label:"Redlines",value:"Minimal, usually 1 round"},{label:"Paper",value:"Generally takes vendor paper"},{label:"Security",value:"Strong security review but fast"}],
-   redlineNotes:["Engineers make the decision. Get a technical champion.","POC is essential. They want to see it work before buying.","Legal is straightforward once engineering approves."],
-   timeline:[{stage:"Technical eval",desc:"Engineer-led proof of concept",time:"Week 1-3"},{stage:"Business case",desc:"Eng champion presents internally",time:"Week 3-4"},{stage:"Approval",desc:"Finance plus CTO",time:"Week 4-5"},{stage:"Legal",desc:"Light review, usually 1 week",time:"Week 5-6"}],
-   budget:[{m:"Jan",p:45},{m:"Feb",p:50},{m:"Mar",p:65},{m:"Apr",p:55},{m:"May",p:50},{m:"Jun",p:75},{m:"Jul",p:45},{m:"Aug",p:48},{m:"Sep",p:60},{m:"Oct",p:58},{m:"Nov",p:65},{m:"Dec",p:80}],
-   fiscalYearEnd:"December 31",outOfCycle:"Yes, engineering teams have discretionary budget",spendAreas:"Dev Tooling, Infrastructure, Security, Data",
-   quickIntel:[{label:"Key",value:"Get an engineering champion first."},{label:"POC",value:"Required. Plan for 2-3 week eval."},{label:"Cycle",value:"4-8 weeks typical."},{label:"Budget",value:"Engineering discretionary budget exists."}],
-   reviews:[{role:"AE",size:"$220K",date:"3 weeks ago",text:"Engineering-led sale all the way. If you cannot get an engineer excited about the product nothing happens. Once you have that champion the deal moves fast. Finance and legal are light.",tags:["tag-blue","tag-green"],labels:["Engineering led","Fast close"]}]
-  },
-  {id:5,name:"UnitedHealth Group",ticker:"UNH",industry:"Healthcare",size:"10,000+",segment:"enterprise",surveys:78,logo:"UH",color:"#ff5f5f",
-   scores:{decision:4.8,legal:2.9,budget:5.1,complexity:3.6},tags:["enterprise","healthcare"],
-   stakeholders:[
-     {initials:"CO",role:"Compliance / Legal",title:"Healthcare reg compliance governs all purchases",power:5,color:"#ff5f5f"},
-     {initials:"CIO",role:"CIO",title:"Technology decisions require CIO approval",power:4,color:"#4d9ef7"},
-     {initials:"PR",role:"Supply Chain / Procurement",title:"Runs all formal sourcing",power:4,color:"#b06bff"}
-   ],
-   legalStrict:88,legalFacts:[{label:"Redlines",value:"HIPAA plus BAA mandatory, 6+ rounds"},{label:"Paper",value:"Insists on their paper always"},{label:"Reg",value:"HIPAA, HITECH, SOC 2 required"}],
-   redlineNotes:["HIPAA Business Associate Agreement is mandatory and takes months.","They will not deviate from their standard contract.","Compliance review runs parallel to legal but can add 8+ weeks."],
-   timeline:[{stage:"Vendor qualification",desc:"HIPAA / security pre-screen",time:"Month 1"},{stage:"BAA negotiation",desc:"Business Associate Agreement",time:"Month 2-4"},{stage:"Compliance review",desc:"HITECH, SOC 2, pen test",time:"Month 3-5"},{stage:"Procurement RFP",desc:"Formal sourcing evaluation",time:"Month 4-6"},{stage:"Approval",desc:"CIO plus Legal plus Compliance",time:"Month 6+"}],
-   budget:[{m:"Jan",p:25},{m:"Feb",p:30},{m:"Mar",p:20},{m:"Apr",p:45},{m:"May",p:35},{m:"Jun",p:40},{m:"Jul",p:30},{m:"Aug",p:35},{m:"Sep",p:50},{m:"Oct",p:60},{m:"Nov",p:55},{m:"Dec",p:45}],
-   fiscalYearEnd:"December 31",outOfCycle:"Rare, regulatory purchases only",spendAreas:"Compliance Tech, Clinical Data, Population Health",
-   quickIntel:[{label:"Must have",value:"HIPAA BAA signed before any data discussion."},{label:"Cycle",value:"12-24 months is realistic."},{label:"Key",value:"Compliance and legal run on different tracks."},{label:"Watch",value:"Their paper is truly non-negotiable."}],
-   reviews:[{role:"Enterprise AE",size:"$800K",date:"6 months ago",text:"Budget 18 months minimum. The BAA process alone took 4 months running in parallel with everything else. Their compliance team and legal team do not talk to each other. You have to manage both relationships simultaneously.",tags:["tag-red","tag-red"],labels:["Very long cycle","HIPAA intensive"]}]
-  },
-  {id:6,name:"Shopify",ticker:"SHOP",industry:"Technology",size:"5,000-10,000",segment:"mid-market",surveys:203,logo:"SH",color:"#00e5a0",
-   scores:{decision:8.7,legal:7.8,budget:8.2,complexity:8.3},tags:["mid-market","technology"],
-   stakeholders:[
-     {initials:"VP",role:"VP Product / Engineering",title:"Primary authority for tools and platforms",power:5,color:"#00e5a0"},
-     {initials:"FIN",role:"Finance",title:"Budget sign-off for annual contracts",power:3,color:"#4d9ef7"}
-   ],
-   legalStrict:30,legalFacts:[{label:"Redlines",value:"Usually accepts standard terms"},{label:"Paper",value:"Flexible, takes vendor paper"},{label:"Speed",value:"Legal cycle is rarely a blocker"}],
-   redlineNotes:["Very founder culture. Decisions made quickly.","Legal is lightweight. They move fast.","Get to a product or engineering lead and close fast."],
-   timeline:[{stage:"Initial eval",desc:"Product-led trial / POC",time:"Week 1-2"},{stage:"Internal review",desc:"VP makes recommendation",time:"Week 2-3"},{stage:"Finance approval",desc:"Quick sign-off",time:"Week 3"},{stage:"Signature",desc:"DocuSign, same day",time:"Week 3-4"}],
-   budget:[{m:"Jan",p:55},{m:"Feb",p:58},{m:"Mar",p:70},{m:"Apr",p:60},{m:"May",p:55},{m:"Jun",p:80},{m:"Jul",p:50},{m:"Aug",p:52},{m:"Sep",p:65},{m:"Oct",p:62},{m:"Nov",p:70},{m:"Dec",p:90}],
-   fiscalYearEnd:"December 31",outOfCycle:"Yes, move fast if there is clear value",spendAreas:"Developer Tools, Commerce Infra, Data, AI",
-   quickIntel:[{label:"Speed",value:"Can close in under a month."},{label:"Entry",value:"Product or Engineering VP, not procurement."},{label:"Cycle",value:"2-5 weeks typical."},{label:"Style",value:"Founder culture, quick decisions."}],
-   reviews:[{role:"Mid-Market AE",size:"$95K",date:"2 weeks ago",text:"One of the fastest closes I have had at this deal size. VP of Product was empowered to say yes on the spot in the second call. Finance reviewed the order form within 48 hours. Signed same week.",tags:["tag-green","tag-green"],labels:["Fast close","Smooth"]}]
-  },
-  {id:7,name:"Boeing",ticker:"BA",industry:"Manufacturing",size:"10,000+",segment:"enterprise",surveys:61,logo:"BO",color:"#b06bff",
-   scores:{decision:4.1,legal:3.0,budget:4.5,complexity:3.2},tags:["enterprise","manufacturing"],
-   stakeholders:[
-     {initials:"CPO",role:"Chief Procurement Officer",title:"Procurement owns vendor decisions entirely",power:5,color:"#b06bff"},
-     {initials:"DOD",role:"Compliance / DoD Regs",title:"Government contract regs apply to all vendors",power:5,color:"#ff5f5f"},
-     {initials:"ENG",role:"Engineering",title:"Technical validation required",power:3,color:"#4d9ef7"}
-   ],
-   legalStrict:95,legalFacts:[{label:"Redlines",value:"DFARS / FAR compliance, non-negotiable"},{label:"Paper",value:"Government-aligned contract terms always"},{label:"Security",value:"CMMC compliance required"}],
-   redlineNotes:["DFARS and FAR apply to many contracts. Research them first.","CMMC cybersecurity certification may be required.","Expect government-style procurement timelines regardless of deal value."],
-   timeline:[{stage:"Supplier qualification",desc:"CMMC plus background check",time:"Month 1-2"},{stage:"Compliance review",desc:"DFARS/FAR assessment",time:"Month 2-4"},{stage:"Technical eval",desc:"Engineering-led deep dive",time:"Month 3-5"},{stage:"Contract negotiation",desc:"Government-aligned terms",time:"Month 5-8"},{stage:"Approval",desc:"Multiple executive sign-offs",time:"Month 8-9+"}],
-   budget:[{m:"Jan",p:15},{m:"Feb",p:20},{m:"Mar",p:25},{m:"Apr",p:35},{m:"May",p:30},{m:"Jun",p:45},{m:"Jul",p:55},{m:"Aug",p:60},{m:"Sep",p:65},{m:"Oct",p:50},{m:"Nov",p:30},{m:"Dec",p:25}],
-   fiscalYearEnd:"December 31",outOfCycle:"Tied to government contract cycles",spendAreas:"Aerospace Tech, Manufacturing, Safety / Compliance",
-   quickIntel:[{label:"Must have",value:"CMMC certification before pursuing."},{label:"Cycle",value:"9-24 months realistic."},{label:"Key",value:"Government regs shape everything."},{label:"Warning",value:"Not for companies without compliance infrastructure."}],
-   reviews:[{role:"Enterprise AE",size:"$3.5M",date:"4 months ago",text:"We did not know about CMMC requirements until month 3. That set us back 6 months. If you are going after Boeing get your CMMC certification started before the first call.",tags:["tag-red","tag-red"],labels:["Extremely complex","Govt regs"]}]
-  }
+  {id:0,name:"Salesforce",ticker:"CRM",industry:"Technology",size:"10,000+",segment:"enterprise",surveys:247,logo:"SF",color:"#00e5a0",scores:{decision:7.8,legal:5.2,budget:8.1,complexity:7.4},tags:["enterprise","technology"],stakeholders:[{initials:"VP",role:"VP of IT / CIO",title:"Final signature authority for all tech over $50K",power:5,color:"#00e5a0"},{initials:"CFO",role:"Finance / CFO",title:"Required for anything over $250K or multi-year",power:4,color:"#f5a623"},{initials:"PR",role:"Procurement",title:"Runs vendor scoring and gets involved early",power:3,color:"#4d9ef7"},{initials:"GC",role:"Legal / GC",title:"Reviews all paper, separate from procurement",power:3,color:"#b06bff"}],legalStrict:72,legalFacts:[{label:"Avg redline rounds",value:"3.2 rounds avg"},{label:"Preferred paper",value:"Insists on their MSA"},{label:"DPA required",value:"Yes, always"}],redlineNotes:["Budget approval and legal run in parallel. Start both at the same time.","DPA must be finalized before they countersign. Budget extra time.","Legal team is responsive Mon-Wed, slow Thu-Fri."],timeline:[{stage:"First meeting",desc:"Initial discovery call",time:"Day 1"},{stage:"Technical review",desc:"IT and security eval, avg 3 weeks",time:"Week 2-4"},{stage:"Procurement entry",desc:"Formal vendor registration",time:"Week 4"},{stage:"Legal review",desc:"MSA plus DPA, 2-4 rounds",time:"Week 5-8"},{stage:"Exec sign-off",desc:"VP or above signs",time:"Week 9"}],budget:[{m:"Jan",p:20},{m:"Feb",p:15},{m:"Mar",p:35},{m:"Apr",p:25},{m:"May",p:20},{m:"Jun",p:40},{m:"Jul",p:18},{m:"Aug",p:22},{m:"Sep",p:38},{m:"Oct",p:30},{m:"Nov",p:45},{m:"Dec",p:85}],fiscalYearEnd:"January 31",outOfCycle:"Yes, with VP+ approval",spendAreas:"Security, Data, GTM Tooling",quickIntel:[{label:"Champion needed",value:"Yes. Must have exec sponsor or deal dies."},{label:"POC required",value:"Usually yes. 30-60 day eval standard."},{label:"Avg sales cycle",value:"60-120 days for enterprise."},{label:"Watch out",value:"Procurement and legal run on separate tracks."}],reviews:[{role:"Enterprise AE",size:"$340K",date:"3 weeks ago",text:"Navigating their IT security review is the longest part. Start the vendor questionnaire on day one.",tags:["tag-amber","tag-blue"],labels:["Security blocker","Slow IT"]},{role:"Strategic AE",size:"$180K",date:"2 months ago",text:"Their procurement team is aggressive on pricing. Expect to give 15-20% off if they bring in a competing bid.",tags:["tag-red","tag-amber"],labels:["Pricing pressure","RFP risk"]}]},
+  {id:1,name:"JPMorgan Chase",ticker:"JPM",industry:"Financial Services",size:"10,000+",segment:"enterprise",surveys:189,logo:"JP",color:"#4d9ef7",scores:{decision:6.2,legal:3.1,budget:7.0,complexity:4.8},tags:["enterprise","finance"],stakeholders:[{initials:"GC",role:"Legal / GC",title:"Controls all vendor contracts, inflexible on MSA",power:5,color:"#f5a623"},{initials:"CTO",role:"CTO / Tech Leadership",title:"Technology buying authority",power:4,color:"#4d9ef7"},{initials:"CO",role:"Compliance Officer",title:"Must sign off on data handling",power:4,color:"#ff5f5f"},{initials:"PR",role:"Sourcing / Procurement",title:"Runs RFP and vendor scoring process",power:3,color:"#b06bff"}],legalStrict:91,legalFacts:[{label:"Avg redline rounds",value:"5-7 rounds"},{label:"Preferred paper",value:"Must use their paper"},{label:"Reg compliance",value:"FINRA, SOX, GDPR required"}],redlineNotes:["Get your legal team aligned to their paper early. You will not win on your paper.","Compliance review is separate and can add 4-6 weeks minimum.","Expect a TPRM audit before signing."],timeline:[{stage:"Vendor registration",desc:"Must be registered before any RFP",time:"Week 1"},{stage:"Security review",desc:"TPRM plus penetration test",time:"Week 2-6"},{stage:"RFP scoring",desc:"Formal vendor evaluation",time:"Week 6-10"},{stage:"Legal redlines",desc:"On their paper, 5+ rounds",time:"Week 10-20"},{stage:"Final approval",desc:"Senior leadership sign-off",time:"Week 20-24"}],budget:[{m:"Jan",p:30},{m:"Feb",p:30},{m:"Mar",p:55},{m:"Apr",p:25},{m:"May",p:20},{m:"Jun",p:60},{m:"Jul",p:20},{m:"Aug",p:25},{m:"Sep",p:50},{m:"Oct",p:30},{m:"Nov",p:40},{m:"Dec",p:70}],fiscalYearEnd:"December 31",outOfCycle:"Rare, requires MD+ approval",spendAreas:"Cybersecurity, Compliance, Cloud Infrastructure",quickIntel:[{label:"Entry point",value:"Work through IT or a specific LOB, not central IT."},{label:"POC process",value:"POC rarely happens. Expect lengthy RFP instead."},{label:"Avg sales cycle",value:"6-18 months for meaningful contracts."},{label:"Key challenge",value:"FINRA and SOX compliance add months."}],reviews:[{role:"Enterprise AE",size:"$1.2M TCV",date:"1 month ago",text:"Start the TPRM process before you even demo. Their third-party risk team runs independently from procurement.",tags:["tag-red","tag-amber"],labels:["TPRM blocker","Long cycle"]}]},
+  {id:2,name:"HubSpot",ticker:"HUBS",industry:"Technology",size:"5,000-10,000",segment:"mid-market",surveys:312,logo:"HS",color:"#f5a623",scores:{decision:8.9,legal:8.2,budget:7.8,complexity:8.6},tags:["mid-market","technology"],stakeholders:[{initials:"VP",role:"VP of Revenue / CRO",title:"Primary buying authority for most tools",power:5,color:"#f5a623"},{initials:"FIN",role:"Finance",title:"Involved on multi-year or over $100K",power:3,color:"#4d9ef7"},{initials:"IT",role:"IT",title:"Light technical review, rarely a blocker",power:2,color:"#00e5a0"}],legalStrict:28,legalFacts:[{label:"Avg redline rounds",value:"1-2 rounds typical"},{label:"Preferred paper",value:"Usually accepts vendor paper"},{label:"DPA",value:"Straightforward standard addendum"}],redlineNotes:["Very pragmatic on legal. They want to close quickly.","Standard DPA is almost always accepted.","Finance may negotiate payment terms on larger deals."],timeline:[{stage:"Discovery",desc:"Usually 1-2 calls",time:"Week 1"},{stage:"Demo / POC",desc:"Quick eval, 1-2 weeks",time:"Week 2-3"},{stage:"Proposal",desc:"Decision usually same week",time:"Week 3-4"},{stage:"Legal",desc:"Often waived for smaller deals",time:"Week 4-5"},{stage:"Signature",desc:"DocuSign, same day typically",time:"Week 5"}],budget:[{m:"Jan",p:55},{m:"Feb",p:50},{m:"Mar",p:70},{m:"Apr",p:55},{m:"May",p:50},{m:"Jun",p:80},{m:"Jul",p:45},{m:"Aug",p:48},{m:"Sep",p:65},{m:"Oct",p:55},{m:"Nov",p:60},{m:"Dec",p:90}],fiscalYearEnd:"December 31",outOfCycle:"Yes, very willing to spend when value is clear",spendAreas:"Sales Tools, Marketing, Analytics, AI",quickIntel:[{label:"Decision speed",value:"Often same-week decisions from VP level."},{label:"Best entry",value:"CRO / VP Revenue controls budget."},{label:"POC",value:"Short POC usually welcomed, 1 week."},{label:"Avg cycle",value:"2-4 weeks for mid-market tools."}],reviews:[{role:"AE",size:"$48K",date:"1 week ago",text:"Easiest company I have sold to in years. The CRO came to the second call with a decision ready.",tags:["tag-green","tag-green"],labels:["Fast close","Smooth legal"]}]},
+  {id:3,name:"General Motors",ticker:"GM",industry:"Manufacturing",size:"10,000+",segment:"enterprise",surveys:94,logo:"GM",color:"#b06bff",scores:{decision:5.4,legal:4.0,budget:5.8,complexity:4.2},tags:["enterprise","manufacturing"],stakeholders:[{initials:"CPO",role:"Chief Procurement Officer",title:"Central procurement owns all vendor decisions",power:5,color:"#b06bff"},{initials:"BU",role:"Business Unit VP",title:"Sponsor required but procurement still controls",power:3,color:"#4d9ef7"},{initials:"IT",role:"IT Architecture",title:"Tech review required for any software",power:3,color:"#00e5a0"}],legalStrict:78,legalFacts:[{label:"Redline rounds",value:"4-6 rounds average"},{label:"Paper",value:"Uses their standard supplier agreement"},{label:"Insurance req.",value:"High insurance minimums required"}],redlineNotes:["Get on the preferred supplier registry before pursuing a deal.","Their supplier agreement has high insurance minimums.","Budget for a dedicated internal champion or deals get lost in procurement."],timeline:[{stage:"Supplier registration",desc:"Must be in their system first",time:"Month 1"},{stage:"RFQ / RFP",desc:"Formal sourcing process mandatory",time:"Month 2-3"},{stage:"Business case",desc:"ROI submission to CPO",time:"Month 3-4"},{stage:"Legal and insurance",desc:"Supplier agreement plus insurance review",time:"Month 4-6"},{stage:"PO issuance",desc:"Purchase order before any work begins",time:"Month 6+"}],budget:[{m:"Jan",p:20},{m:"Feb",p:25},{m:"Mar",p:30},{m:"Apr",p:55},{m:"May",p:40},{m:"Jun",p:35},{m:"Jul",p:20},{m:"Aug",p:25},{m:"Sep",p:45},{m:"Oct",p:60},{m:"Nov",p:50},{m:"Dec",p:40}],fiscalYearEnd:"December 31",outOfCycle:"No, strict annual budget process",spendAreas:"Manufacturing Tech, EV / Automation, Supply Chain",quickIntel:[{label:"Must have",value:"Preferred supplier status before deal can close."},{label:"Key relationship",value:"CPO office controls all. Exec sponsor is critical."},{label:"Avg cycle",value:"6-18 months is normal."},{label:"Watch out",value:"High insurance minimums. Check early."}],reviews:[{role:"Enterprise AE",size:"$2.1M TCV",date:"2 months ago",text:"Get on the preferred supplier list before you do anything else.",tags:["tag-red","tag-amber"],labels:["Long cycle","Procurement heavy"]}]},
+  {id:4,name:"Stripe",ticker:"STRP",industry:"Technology",size:"5,000-10,000",segment:"mid-market",surveys:156,logo:"ST",color:"#00e5a0",scores:{decision:8.2,legal:7.1,budget:8.4,complexity:7.9},tags:["mid-market","technology"],stakeholders:[{initials:"ENG",role:"Engineering / CTO",title:"Primary authority for infrastructure tools",power:5,color:"#00e5a0"},{initials:"FIN",role:"Finance",title:"Budget approval on contracts",power:3,color:"#4d9ef7"}],legalStrict:35,legalFacts:[{label:"Redlines",value:"Minimal, usually 1 round"},{label:"Paper",value:"Generally takes vendor paper"},{label:"Security",value:"Strong security review but fast"}],redlineNotes:["Engineers make the decision. Get a technical champion.","POC is essential. They want to see it work before buying.","Legal is straightforward once engineering approves."],timeline:[{stage:"Technical eval",desc:"Engineer-led proof of concept",time:"Week 1-3"},{stage:"Business case",desc:"Eng champion presents internally",time:"Week 3-4"},{stage:"Approval",desc:"Finance plus CTO",time:"Week 4-5"},{stage:"Legal",desc:"Light review, usually 1 week",time:"Week 5-6"}],budget:[{m:"Jan",p:45},{m:"Feb",p:50},{m:"Mar",p:65},{m:"Apr",p:55},{m:"May",p:50},{m:"Jun",p:75},{m:"Jul",p:45},{m:"Aug",p:48},{m:"Sep",p:60},{m:"Oct",p:58},{m:"Nov",p:65},{m:"Dec",p:80}],fiscalYearEnd:"December 31",outOfCycle:"Yes, engineering teams have discretionary budget",spendAreas:"Dev Tooling, Infrastructure, Security, Data",quickIntel:[{label:"Key",value:"Get an engineering champion first."},{label:"POC",value:"Required. Plan for 2-3 week eval."},{label:"Cycle",value:"4-8 weeks typical."},{label:"Budget",value:"Engineering discretionary budget exists."}],reviews:[{role:"AE",size:"$220K",date:"3 weeks ago",text:"Engineering-led sale all the way. Once you have that champion the deal moves fast.",tags:["tag-blue","tag-green"],labels:["Engineering led","Fast close"]}]},
+  {id:5,name:"UnitedHealth Group",ticker:"UNH",industry:"Healthcare",size:"10,000+",segment:"enterprise",surveys:78,logo:"UH",color:"#ff5f5f",scores:{decision:4.8,legal:2.9,budget:5.1,complexity:3.6},tags:["enterprise","healthcare"],stakeholders:[{initials:"CO",role:"Compliance / Legal",title:"Healthcare reg compliance governs all purchases",power:5,color:"#ff5f5f"},{initials:"CIO",role:"CIO",title:"Technology decisions require CIO approval",power:4,color:"#4d9ef7"},{initials:"PR",role:"Supply Chain / Procurement",title:"Runs all formal sourcing",power:4,color:"#b06bff"}],legalStrict:88,legalFacts:[{label:"Redlines",value:"HIPAA plus BAA mandatory, 6+ rounds"},{label:"Paper",value:"Insists on their paper always"},{label:"Reg",value:"HIPAA, HITECH, SOC 2 required"}],redlineNotes:["HIPAA Business Associate Agreement is mandatory and takes months.","They will not deviate from their standard contract.","Compliance review runs parallel to legal but can add 8+ weeks."],timeline:[{stage:"Vendor qualification",desc:"HIPAA / security pre-screen",time:"Month 1"},{stage:"BAA negotiation",desc:"Business Associate Agreement",time:"Month 2-4"},{stage:"Compliance review",desc:"HITECH, SOC 2, pen test",time:"Month 3-5"},{stage:"Procurement RFP",desc:"Formal sourcing evaluation",time:"Month 4-6"},{stage:"Approval",desc:"CIO plus Legal plus Compliance",time:"Month 6+"}],budget:[{m:"Jan",p:25},{m:"Feb",p:30},{m:"Mar",p:20},{m:"Apr",p:45},{m:"May",p:35},{m:"Jun",p:40},{m:"Jul",p:30},{m:"Aug",p:35},{m:"Sep",p:50},{m:"Oct",p:60},{m:"Nov",p:55},{m:"Dec",p:45}],fiscalYearEnd:"December 31",outOfCycle:"Rare, regulatory purchases only",spendAreas:"Compliance Tech, Clinical Data, Population Health",quickIntel:[{label:"Must have",value:"HIPAA BAA signed before any data discussion."},{label:"Cycle",value:"12-24 months is realistic."},{label:"Key",value:"Compliance and legal run on different tracks."},{label:"Watch",value:"Their paper is truly non-negotiable."}],reviews:[{role:"Enterprise AE",size:"$800K",date:"6 months ago",text:"Budget 18 months minimum. The BAA process alone took 4 months.",tags:["tag-red","tag-red"],labels:["Very long cycle","HIPAA intensive"]}]},
+  {id:6,name:"Shopify",ticker:"SHOP",industry:"Technology",size:"5,000-10,000",segment:"mid-market",surveys:203,logo:"SH",color:"#00e5a0",scores:{decision:8.7,legal:7.8,budget:8.2,complexity:8.3},tags:["mid-market","technology"],stakeholders:[{initials:"VP",role:"VP Product / Engineering",title:"Primary authority for tools and platforms",power:5,color:"#00e5a0"},{initials:"FIN",role:"Finance",title:"Budget sign-off for annual contracts",power:3,color:"#4d9ef7"}],legalStrict:30,legalFacts:[{label:"Redlines",value:"Usually accepts standard terms"},{label:"Paper",value:"Flexible, takes vendor paper"},{label:"Speed",value:"Legal cycle is rarely a blocker"}],redlineNotes:["Very founder culture. Decisions made quickly.","Legal is lightweight. They move fast.","Get to a product or engineering lead and close fast."],timeline:[{stage:"Initial eval",desc:"Product-led trial / POC",time:"Week 1-2"},{stage:"Internal review",desc:"VP makes recommendation",time:"Week 2-3"},{stage:"Finance approval",desc:"Quick sign-off",time:"Week 3"},{stage:"Signature",desc:"DocuSign, same day",time:"Week 3-4"}],budget:[{m:"Jan",p:55},{m:"Feb",p:58},{m:"Mar",p:70},{m:"Apr",p:60},{m:"May",p:55},{m:"Jun",p:80},{m:"Jul",p:50},{m:"Aug",p:52},{m:"Sep",p:65},{m:"Oct",p:62},{m:"Nov",p:70},{m:"Dec",p:90}],fiscalYearEnd:"December 31",outOfCycle:"Yes, move fast if there is clear value",spendAreas:"Developer Tools, Commerce Infra, Data, AI",quickIntel:[{label:"Speed",value:"Can close in under a month."},{label:"Entry",value:"Product or Engineering VP, not procurement."},{label:"Cycle",value:"2-5 weeks typical."},{label:"Style",value:"Founder culture, quick decisions."}],reviews:[{role:"Mid-Market AE",size:"$95K",date:"2 weeks ago",text:"One of the fastest closes I have had at this deal size. VP of Product was empowered to say yes on the spot.",tags:["tag-green","tag-green"],labels:["Fast close","Smooth"]}]},
+  {id:7,name:"Boeing",ticker:"BA",industry:"Manufacturing",size:"10,000+",segment:"enterprise",surveys:61,logo:"BO",color:"#b06bff",scores:{decision:4.1,legal:3.0,budget:4.5,complexity:3.2},tags:["enterprise","manufacturing"],stakeholders:[{initials:"CPO",role:"Chief Procurement Officer",title:"Procurement owns vendor decisions entirely",power:5,color:"#b06bff"},{initials:"DOD",role:"Compliance / DoD Regs",title:"Government contract regs apply to all vendors",power:5,color:"#ff5f5f"},{initials:"ENG",role:"Engineering",title:"Technical validation required",power:3,color:"#4d9ef7"}],legalStrict:95,legalFacts:[{label:"Redlines",value:"DFARS / FAR compliance, non-negotiable"},{label:"Paper",value:"Government-aligned contract terms always"},{label:"Security",value:"CMMC compliance required"}],redlineNotes:["DFARS and FAR apply to many contracts. Research them first.","CMMC cybersecurity certification may be required.","Expect government-style procurement timelines regardless of deal value."],timeline:[{stage:"Supplier qualification",desc:"CMMC plus background check",time:"Month 1-2"},{stage:"Compliance review",desc:"DFARS/FAR assessment",time:"Month 2-4"},{stage:"Technical eval",desc:"Engineering-led deep dive",time:"Month 3-5"},{stage:"Contract negotiation",desc:"Government-aligned terms",time:"Month 5-8"},{stage:"Approval",desc:"Multiple executive sign-offs",time:"Month 8-9+"}],budget:[{m:"Jan",p:15},{m:"Feb",p:20},{m:"Mar",p:25},{m:"Apr",p:35},{m:"May",p:30},{m:"Jun",p:45},{m:"Jul",p:55},{m:"Aug",p:60},{m:"Sep",p:65},{m:"Oct",p:50},{m:"Nov",p:30},{m:"Dec",p:25}],fiscalYearEnd:"December 31",outOfCycle:"Tied to government contract cycles",spendAreas:"Aerospace Tech, Manufacturing, Safety / Compliance",quickIntel:[{label:"Must have",value:"CMMC certification before pursuing."},{label:"Cycle",value:"9-24 months realistic."},{label:"Key",value:"Government regs shape everything."},{label:"Warning",value:"Not for companies without compliance infrastructure."}],reviews:[{role:"Enterprise AE",size:"$3.5M",date:"4 months ago",text:"We did not know about CMMC requirements until month 3. That set us back 6 months.",tags:["tag-red","tag-red"],labels:["Extremely complex","Govt regs"]}]}
 ];
 
 var currentStep = 0;
 var currentCompany = null;
 var activeFilter = "all";
+var surveyData = {};
+var isSubmitting = false;
 
 var surveyStepDefs = [
-  {label:"Company and Verification"},
-  {label:"Decision Maker Mapping"},
-  {label:"Legal and Redlines"},
-  {label:"Budget and Spend Cycles"},
-  {label:"Stakeholder Intel"}
+  {label:"Deal Context"},
+  {label:"Decision Maker Intel"},
+  {label:"Responsiveness & Ghosting"},
+  {label:"Procurement & Legal"},
+  {label:"Budget & Spend"},
+  {label:"Sales Cycle Metrics"},
+  {label:"Outcome & Signals"}
 ];
 
 var surveyStepContent = [
   {
-    tag:"Step 1 of 5",
-    title:"Company and Verification",
-    sub:"We verify all submissions against work email domains. Your identity is never shared.",
+    tag:"Step 1 of 7",title:"Deal Context",
+    sub:"Establishes the baseline so every submission is comparable across companies and time periods.",
     fields:[
-      {type:"input",label:"Your work email",hint:"Used for verification only. Never displayed.",placeholder:"you@yourcompany.com"},
-      {type:"select",label:"Your role / title",options:["Select your role...","Account Executive","Enterprise AE","Strategic Account Manager","Sales Development Rep","VP of Sales","Founder / CEO","Other"]},
-      {type:"input",label:"Company you sold to or attempted to",placeholder:"e.g. Microsoft, JPMorgan Chase, Acme Corp"},
-      {type:"radio",label:"Approximate deal size",name:"dealsize",options:["Under $10K","$10K to $100K","$100K to $500K","$500K to $1M","$1M+"]},
-      {type:"radio",label:"Deal outcome",name:"outcome",options:["Closed Won","Closed Lost","Still in progress","No decision / ghosted"]}
+      {type:"input",id:"company_website",label:"What is the website of the company you sold to?",placeholder:"e.g. salesforce.com"},
+      {type:"radio",id:"rep_role",label:"What was your role at the time?",options:["Account Executive","Enterprise AE","Strategic Account Manager","SDR","VP of Sales","Founder / CEO","Other"]},
+      {type:"radio",id:"deal_quarter",label:"What year and quarter did this deal reach its furthest stage?",options:["Q1 2024","Q2 2024","Q3 2024","Q4 2024","Q1 2025","Q2 2025","Q3 2025","Q4 2025","Q1 2026","Q2 2026"]},
+      {type:"radio",id:"acv_range",label:"What was the approximate annual contract value?",options:["Under $10K","$10K-$50K","$50K-$100K","$100K-$250K","$250K-$500K","$500K-$1M","$1M+"]},
+      {type:"radio",id:"product_category",label:"What category of product or service were you selling?",options:["Software / SaaS","Hardware","Professional Services","Data / Analytics","Security","Infrastructure","Other"]},
+      {type:"radio",id:"deal_outcome",label:"What was the deal outcome?",options:["Closed Won","Closed Lost","No Decision","Ghosted","Still Active"]},
+      {type:"radio",id:"entry_motion",label:"How did you initially get into this account?",options:["Cold outbound","Inbound lead","Referral","Existing relationship","Partner / channel"]},
+      {type:"radio",id:"prior_relationship",label:"Had you sold to this company before?",options:["Yes","No"]}
     ]
   },
   {
-    tag:"Step 2 of 5",
-    title:"Decision Maker Mapping",
-    sub:"Help future reps know who actually has authority, not just who takes meetings.",
+    tag:"Step 2 of 7",title:"Decision Maker Intelligence",
+    sub:"Help future reps know who actually has authority before wasting meetings on the wrong people.",
     fields:[
-      {type:"select",label:"What title level had final signature authority?",options:["Select title level...","Individual Contributor","Manager / Director","VP / Senior VP","C-Suite (CTO, CFO, COO)","CEO / President","Board approval required"]},
-      {type:"radio",label:"Which department owned the final sign-off?",name:"signdept",options:["IT / Engineering","Finance / Procurement","The business unit / department","Legal","Centralized C-Suite"]},
-      {type:"radio",label:"Did your initial champion have real authority?",name:"champion",options:["Yes, they could drive the deal independently","Partial, needed to pull in others above them","No, they were an influencer not a decision maker"]},
-      {type:"scale",label:"How many stakeholders were involved in the final decision?",id:"scale-stakeholders",min:"Just 1",max:"10+"},
-      {type:"radio",label:"Was a formal RFP or vendor evaluation required?",name:"rfp",options:["No formal process, champion drove it through","Informal review, a few internal conversations","Formal RFP / vendor scoring process","Full procurement / sourcing team involvement"]},
-      {type:"textarea",label:"Notes on navigating their org structure",hint:"What would you tell a fellow rep going into this account?",placeholder:"e.g. The VP of IT always says yes but legal and finance need to co-sign..."}
+      {type:"number",id:"meeting_participant_count",label:"How many people were involved in direct meetings with you during the sales process?",placeholder:"Enter a number"},
+      {type:"number",id:"budget_authority_count",label:"How many of those people had actual budget authority?",placeholder:"Enter a number"},
+      {type:"radio",id:"dm_seniority",label:"What was the seniority level of the final decision maker?",options:["Manager","Director","VP","SVP","C-Suite","CEO / President","Board level"]},
+      {type:"radio",id:"dm_department",label:"What department did the final decision maker sit in?",options:["IT / Engineering","Finance","Legal","Procurement","Business Unit","C-Suite Office","HR","Security"]},
+      {type:"radio",id:"poc_authority",label:"Did your initial point of contact have final signature authority?",options:["Yes","No, someone above them signed","No, it went to a committee","No, procurement took over"]},
+      {type:"radio",id:"dm_access_stage",label:"At what point did you first get access to the actual decision maker?",options:["Before demo","During demo","Post demo","During legal","Never got direct access"]},
+      {type:"radio",id:"dm_change_count",label:"How many times did the key decision maker change during the process?",options:["0","1","2","3+"]},
+      {type:"radio",id:"rfp_type",label:"Was a formal vendor scoring or RFP process required?",options:["No formal process","Informal internal review","Formal RFP with scoring","Full sourcing / procurement RFP"]},
+      {type:"radio",id:"competing_vendors",label:"How many competing vendors were evaluated alongside you?",options:["None","1","2-3","4-5","6+","Unknown"]}
     ]
   },
   {
-    tag:"Step 3 of 5",
-    title:"Legal and Redline Process",
+    tag:"Step 3 of 7",title:"Responsiveness & Ghosting",
+    sub:"Unique to BuyerVue. Maps communication behavior by company to help reps know what to expect.",
+    fields:[
+      {type:"radio",id:"avg_response_time",label:"On average how many hours did your main point of contact take to respond to emails?",options:["Under 4 hours","4-24 hours","1-3 days","3-7 days","7+ days","Inconsistent"]},
+      {type:"radio",id:"ghost_count",label:"How many times were you ghosted for 7 or more days during this deal?",options:["0","1","2","3","4+"]},
+      {type:"radio",id:"ghost_stage",label:"At what stage did ghosting most commonly occur?",options:["Never ghosted","Early discovery","Post demo","Post proposal","During legal / IT review","Post verbal commit"]},
+      {type:"radio",id:"followup_count",label:"How many follow-up attempts did it typically take to get a response after going dark?",options:["1","2","3","4","5+","Never responded"]},
+      {type:"radio",id:"responsiveness_trend",label:"Did responsiveness get better or worse as the deal progressed?",options:["Got more responsive","Stayed consistent","Got less responsive","Went completely dark"]},
+      {type:"scale",id:"communication_quality",label:"How would you rate the overall communication quality of this buying team?",min:"Terrible",max:"Excellent",steps:5}
+    ]
+  },
+  {
+    tag:"Step 4 of 7",title:"Procurement & Legal",
     sub:"Legal cycles can kill deals or drag timelines by weeks. Help reps know what to expect.",
     fields:[
-      {type:"radio",label:"How long did legal review and redlining take?",name:"legaltime",options:["Under 1 week","1 to 2 weeks","2 to 4 weeks","1 to 3 months","3+ months"]},
-      {type:"scale",label:"How strict were they on redlines? (1 = very flexible, 5 = completely rigid)",id:"scale-redlines",min:"Very flexible",max:"Completely rigid"},
-      {type:"tags",label:"Which contract terms did they push hardest on?",hint:"Select all that apply",tags:["Liability caps","IP ownership","Data privacy / DPA","SLA / uptime guarantees","Termination for convenience","Auto-renewal clauses","Indemnification","Governing law / jurisdiction","Payment terms","Price escalation"]},
-      {type:"radio",label:"Did they insist on using their paper (their MSA)?",name:"paper",options:["No, they accepted our standard agreement","Preferred their paper but negotiated","Insisted on their paper, non-negotiable"]},
-      {type:"radio",label:"Did procurement get involved separately from legal?",name:"procurement",options:["No, legal handled everything","Yes, procurement was involved in pricing only","Yes, procurement was heavily involved throughout"]},
-      {type:"textarea",label:"Legal notes for other reps",placeholder:"e.g. Get ahead of DPA requirements early. Their privacy team is a major bottleneck..."}
+      {type:"radio",id:"procurement_involvement",label:"Was a formal procurement or sourcing team involved?",options:["No","Yes, only to help facilitate","Yes, involved in pricing only","Yes, heavily involved throughout","Yes, they ran the entire process"]},
+      {type:"radio",id:"vendor_registration",label:"Was a vendor registration or onboarding process required?",options:["Yes","No"]},
+      {type:"radio",id:"security_review",label:"Was a security or IT risk assessment required?",options:["Yes","No"]},
+      {type:"number",id:"security_review_weeks",label:"If yes, how many weeks did the security review take?",placeholder:"Enter weeks (0 if not applicable)"},
+      {type:"radio",id:"legal_review_required",label:"Was a legal review required?",options:["Yes","No"]},
+      {type:"number",id:"legal_review_weeks",label:"If yes, how many weeks did legal review and redlining take?",placeholder:"Enter weeks (0 if not applicable)"},
+      {type:"number",id:"redline_rounds",label:"How many rounds of redlines were there?",placeholder:"Enter a number"},
+      {type:"radio",id:"contract_paper",label:"Whose contract paper was used?",options:["Ours","Theirs","Negotiated hybrid","No formal contract"]},
+      {type:"scale",id:"contract_flexibility",label:"How would you rate their flexibility on contract terms?",min:"Completely rigid",max:"Very flexible",steps:5},
+      {type:"tags",id:"contested_terms",label:"Which contract terms did they push hardest on?",hint:"Select all that apply",tags:["Liability caps","IP ownership","Data privacy / DPA","SLA / uptime","Termination for convenience","Auto-renewal","Indemnification","Governing law","Payment terms","Price escalation"]},
+      {type:"radio",id:"price_reduction",label:"Did procurement attempt to reduce the price after legal negotiations began?",options:["No","Yes, once","Yes, multiple times"]},
+      {type:"radio",id:"procurement_portal",label:"Did they use a procurement portal?",options:["No","Coupa","SAP Ariba","Jaggaer","Oracle Procurement","Other"]},
+      {type:"radio",id:"insurance_required",label:"Were specific insurance minimums or certifications required?",options:["Yes","No"]}
     ]
   },
   {
-    tag:"Step 4 of 5",
-    title:"Budget and Spend Cycles",
+    tag:"Step 5 of 7",title:"Budget & Spend Intelligence",
     sub:"Budget timing intel separates reps who close from reps who get told maybe next quarter forever.",
     fields:[
-      {type:"radio",label:"What quarter did the deal close or get furthest along?",name:"quarter",options:["Q1 (their fiscal year)","Q2","Q3","Q4 (end of year push)"]},
-      {type:"radio",label:"Was there a pre-allocated budget for this purchase?",name:"budget",options:["Yes, budget was already set aside","No, we had to create a budget exception","Partially, needed additional approval","Did not get clarity on budget source"]},
-      {type:"radio",label:"Do they spend outside of normal budget season?",name:"offcycle",options:["Yes, willing to do out-of-cycle purchases","Sometimes, with senior approval","Rarely, very budget-cycle dependent","No, hard budget season rules"]},
-      {type:"input",label:"Which department or budget line funded this deal?",placeholder:"e.g. IT budget, marketing opex, business unit discretionary..."},
-      {type:"tags",label:"What areas of the business were they actively spending in?",hint:"Select all you observed",tags:["Cybersecurity","Cloud / Infrastructure","Data and Analytics","Sales / GTM tooling","HR / People tools","Finance / ERP","Customer Experience","AI / Automation","Compliance / Legal tech","Developer / Engineering"]},
-      {type:"textarea",label:"Budget and spend notes for other reps",placeholder:"e.g. Q4 is their end-of-year budget flush. New budget opens in February..."}
+      {type:"radio",id:"budget_preallocated",label:"Was budget pre-allocated for this purchase before you engaged?",options:["Yes, fully allocated","Partially allocated","No budget existed","Unknown"]},
+      {type:"radio",id:"deal_fiscal_quarter",label:"What quarter of their fiscal year did the deal close or progress furthest?",options:["Q1","Q2","Q3","Q4"]},
+      {type:"scale",id:"offcycle_willingness",label:"How willing were they to spend outside of normal budget cycles?",min:"Never, hard rules",max:"Very willing anytime",steps:5},
+      {type:"radio",id:"approval_threshold",label:"What was the approval threshold above which additional sign-offs were required?",options:["Under $10K","$10K-$50K","$50K-$100K","$100K-$250K","$250K+","Unknown"]},
+      {type:"radio",id:"business_case",label:"Was a formal business case or ROI document required?",options:["No","Informal justification","Formal written business case","Board level approval required"]},
+      {type:"radio",id:"poc_required",label:"Was a pilot or proof of concept required before budget was committed?",options:["No","Optional POC","Required POC","Required POC with formal scoring"]},
+      {type:"number",id:"poc_weeks",label:"If a POC was required how many weeks did it last?",placeholder:"Enter weeks (0 if not applicable)"},
+      {type:"radio",id:"budget_category",label:"Which area of the business was this purchase primarily categorized under?",options:["IT / Infrastructure","Security","Sales / GTM","Marketing","Finance / ERP","HR / People","Data / Analytics","AI / Automation","Compliance","Customer Experience","Engineering / Dev"]},
+      {type:"tags",id:"negotiated_concessions",label:"What concessions did the client negotiate?",hint:"Select all that apply",tags:["Price reduction","Extended payment terms","Additional seats / licenses at no cost","Free implementation / onboarding","Enhanced SLA / uptime guarantee","Added professional services","Contract term reduction","Termination for convenience clause","Price lock / no escalation clause","Pilot at reduced cost","Custom security or compliance terms","Other"]},
+      {type:"radio",id:"company_spend_mode",label:"Did the company appear to be in growth mode, stable mode, or cost-cutting mode?",options:["Aggressive growth","Moderate growth","Stable / maintaining","Cost-cutting","Significant cost-cutting / layoffs"]},
+      {type:"radio",id:"preferred_vendor_list",label:"Did they have a preferred vendor list and were you on it?",options:["No preferred list","Yes and we were on it","Yes and we were not on it","Unknown"]}
     ]
   },
   {
-    tag:"Step 5 of 5",
-    title:"Stakeholder Intel",
-    sub:"Share what you learned about the people in the process without identifying anyone individually.",
+    tag:"Step 6 of 7",title:"Sales Cycle Metrics",
+    sub:"Pure quantitative benchmarks that help reps forecast and plan.",
     fields:[
-      {type:"scale",label:"Overall procurement complexity (1 = very simple, 5 = extremely complex)",id:"scale-complexity",min:"Very simple",max:"Extremely complex"},
-      {type:"radio",label:"How would you describe their buying culture?",name:"culture",options:["Collaborative, everyone aligned early","Consensus-driven, needed buy-in from many","Top-down, exec made the call","Bureaucratic, process-heavy and slow","Political, internal dynamics complicated things"]},
-      {type:"radio",label:"Were there hidden blockers you did not see coming?",name:"blockers",options:["No, the path was clear","Minor, one or two unexpected hurdles","Significant, deals stalled due to internal blockers"]},
-      {type:"tags",label:"What departments added friction?",hint:"Select all that applied",tags:["Legal","Finance / AP","IT / Security review","Procurement / Sourcing","Executive office","HR / Compliance","None, smooth process"]},
-      {type:"textarea",label:"What advice would you give reps going into this account?",hint:"Your most valuable insight.",placeholder:"e.g. Map the org before your first demo. The VP of IT is the one who says yes but the CISO will kill the deal if not looped in early..."},
-      {type:"scale",label:"Overall experience rating (1 = nightmare, 5 = smooth process)",id:"scale-overall",min:"Nightmare",max:"Smooth"}
+      {type:"number",id:"wks_contact_to_meeting",label:"How many weeks from first contact to first meeting?",placeholder:"Enter weeks"},
+      {type:"number",id:"wks_meeting_to_proposal",label:"How many weeks from first meeting to proposal submitted?",placeholder:"Enter weeks"},
+      {type:"number",id:"wks_proposal_to_verbal",label:"How many weeks from proposal to verbal agreement?",placeholder:"Enter weeks"},
+      {type:"number",id:"wks_verbal_to_signed",label:"How many weeks from verbal agreement to signed contract?",placeholder:"Enter weeks"},
+      {type:"number",id:"total_cycle_weeks",label:"How many total weeks was the full sales cycle?",placeholder:"Enter weeks"},
+      {type:"radio",id:"total_meetings",label:"How many in-person or video meetings took place in total?",options:["1-2","3-5","6-10","11-20","20+"]},
+      {type:"radio",id:"deal_size_change",label:"Did the deal size change from initial proposal to final signature?",options:["Stayed the same","Increased","Decreased less than 10%","Decreased 10-25%","Decreased more than 25%"]}
+    ]
+  },
+  {
+    tag:"Step 7 of 7",title:"Outcome & Predictive Signals",
+    sub:"Creates the longitudinal and predictive data that becomes more powerful as submissions accumulate.",
+    fields:[
+      {type:"radio",id:"loss_reason",label:"If lost, what was the primary reason?",options:["Lost to competitor","No decision","Budget cut","Champion left","Product fit","Price","Legal could not agree","Timing","Unknown","N/A - deal was won"]},
+      {type:"radio",id:"win_factor",label:"If won, what was the single biggest factor?",options:["Product superiority","Price","Relationship","Executive alignment","Timing","POC results","Referral","Incumbent disadvantage","N/A - deal was lost"]},
+      {type:"scale",id:"sell_complexity",label:"Rate the overall complexity of selling to this company from 1 to 10",min:"Very easy",max:"Extremely complex",steps:10},
+      {type:"radio",id:"would_pursue_again",label:"Would you pursue this account again?",options:["Yes immediately","Yes with better preparation","Only for the right deal size","Probably not","Definitely not"]},
+      {type:"scale",id:"rep_recommendation",label:"How likely are you to recommend this company as a target to a fellow rep?",min:"Would not recommend",max:"Highly recommend",steps:5},
+      {type:"radio",id:"tech_stack_mode",label:"Did this company appear to be actively expanding their tech stack?",options:["Yes aggressively","Yes moderately","Stable / maintaining","Consolidating / cutting vendors"]},
+      {type:"textarea",id:"top_rep_tip",label:"What is the single most important thing a rep should know before engaging this company?",hint:"Your most valuable insight. This will be displayed on the company profile.",placeholder:"e.g. Map the org before your first demo. The VP of IT says yes but the CISO will kill the deal if not looped in early..."}
     ]
   }
 ];
 
-function scoreColor(s) {
-  return s >= 7.5 ? "var(--accent)" : s >= 5 ? "var(--amber)" : "var(--red)";
+// ─── AIRTABLE FIELD MAPPING ───
+function buildAirtableFields(data) {
+  var fields = {};
+  var map = {
+    "rep_role": "Rep Role",
+    "deal_quarter": "Deal Quarter",
+    "acv_range": "ACV Range",
+    "product_category": "Product Category",
+    "deal_outcome": "Deal Outcome",
+    "entry_motion": "Entry Motion",
+    "prior_relationship": "Prior Relationship",
+    "meeting_participant_count": "Meeting Participant Count",
+    "budget_authority_count": "Budget Authority Count",
+    "dm_seniority": "DM Seniority Level",
+    "dm_department": "DM Department",
+    "poc_authority": "POC Had Signature Authority",
+    "dm_access_stage": "DM Access Stage",
+    "dm_change_count": "DM Change Count",
+    "rfp_type": "RFP Process Type",
+    "competing_vendors": "Competing Vendor Count",
+    "avg_response_time": "Avg Email Response Time",
+    "ghost_count": "Ghost Count (7+ days)",
+    "ghost_stage": "Primary Ghost Stage",
+    "followup_count": "Follow-ups to Re-engage",
+    "responsiveness_trend": "Responsiveness Trend",
+    "communication_quality": "Communication Quality",
+    "procurement_involvement": "Procurement Involvement",
+    "vendor_registration": "Vendor Registration Required",
+    "security_review": "Security Review Required",
+    "security_review_weeks": "Security Review Duration (Wks)",
+    "legal_review_required": "Legal Review Required",
+    "legal_review_weeks": "Legal Review Duration (Wks)",
+    "redline_rounds": "Redline Rounds",
+    "contract_paper": "Contract Paper",
+    "contract_flexibility": "Contract Flexibility",
+    "contested_terms": "Contested Contract Terms",
+    "price_reduction": "Procurement Price Reduction",
+    "procurement_portal": "Procurement Portal",
+    "insurance_required": "Insurance Certs Required",
+    "budget_preallocated": "Budget Pre-Allocated",
+    "deal_fiscal_quarter": "Deal Fiscal Quarter",
+    "offcycle_willingness": "Off-Cycle Spend Willingness",
+    "approval_threshold": "Budget Approval Threshold",
+    "business_case": "Business Case Required",
+    "poc_required": "POC Required",
+    "poc_weeks": "POC Duration (Wks)",
+    "budget_category": "Budget Category",
+    "negotiated_concessions": "Negotiated Concessions",
+    "company_spend_mode": "Company Spend Mode",
+    "preferred_vendor_list": "Preferred Vendor List Status",
+    "wks_contact_to_meeting": "Wks Contact to Meeting",
+    "wks_meeting_to_proposal": "Wks Meeting to Proposal",
+    "wks_proposal_to_verbal": "Wks Proposal to Verbal",
+    "wks_verbal_to_signed": "Wks Verbal to Signed",
+    "total_cycle_weeks": "Total Cycle Weeks",
+    "total_meetings": "Total Meeting Count",
+    "deal_size_change": "Deal Size Change",
+    "loss_reason": "Primary Loss Reason",
+    "win_factor": "Primary Win Factor",
+    "sell_complexity": "Sell Complexity (1-10)",
+    "would_pursue_again": "Would Pursue Again",
+    "rep_recommendation": "Rep Recommendation Score",
+    "tech_stack_mode": "Tech Stack Mode",
+    "top_rep_tip": "Top Rep Tip",
+    "company_website": "Company Website"
+  };
+
+  for (var key in map) {
+    if (data[key] !== undefined && data[key] !== "" && data[key] !== null) {
+      var airtableField = map[key];
+      var val = data[key];
+      // Number fields
+      var numberFields = ["meeting_participant_count","budget_authority_count","security_review_weeks","legal_review_weeks","redline_rounds","poc_weeks","wks_contact_to_meeting","wks_meeting_to_proposal","wks_proposal_to_verbal","wks_verbal_to_signed","total_cycle_weeks","communication_quality","contract_flexibility","offcycle_willingness","sell_complexity","rep_recommendation"];
+      if (numberFields.indexOf(key) > -1) {
+        var n = parseFloat(val);
+        if (!isNaN(n)) fields[airtableField] = n;
+      } else {
+        fields[airtableField] = val;
+      }
+    }
+  }
+  return fields;
 }
 
-function overallScore(c) {
-  return ((c.scores.decision + c.scores.legal + c.scores.budget + c.scores.complexity) / 4).toFixed(1);
-}
+async function submitToAirtable() {
+  if (isSubmitting) return;
+  isSubmitting = true;
 
-function overallClass(c) {
-  var s = parseFloat(overallScore(c));
-  return s >= 7 ? "high" : s >= 5 ? "mid" : "low";
+  var submitBtn = document.querySelector(".btn-next");
+  if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Submitting..."; }
+
+  var errorEl = document.getElementById("errorMsg");
+  errorEl.style.display = "none";
+
+  var fields = buildAirtableFields(surveyData);
+
+  try {
+    var response = await fetch("/.netlify/functions/submit-survey", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(fields)
+    });
+
+    var result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.error ? JSON.stringify(result.error) : "Submission failed");
+    }
+
+    simulateAccess();
+    showPage("success");
+  } catch (err) {
+    errorEl.textContent = "There was a problem submitting your survey. Please try again.";
+    errorEl.style.display = "block";
+    if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = "Submit Intelligence →"; }
+  }
+
+  isSubmitting = false;
 }
 
 // ─── Q&A SYSTEM ───
@@ -731,30 +729,9 @@ var userHasAccess = false;
 var userAccessExpiry = null;
 
 var qaData = {
-  0:[
-    {id:1,question:"Does their legal team accept standard SaaS liability caps or do they always push for unlimited liability?",askedBy:"Enterprise AE",askedDate:"5 days ago",answers:[
-      {text:"They push hard for unlimited liability on data breaches specifically. We got them to accept a 2x ACV cap after 3 rounds but it took escalating to their GC directly. Do not let procurement handle that conversation.",role:"Strategic AE",date:"4 days ago"},
-      {text:"Same experience. Their standard position is unlimited for IP infringement and data loss. Budget at least 2 extra redline rounds just for the liability section.",role:"Enterprise AE",date:"3 days ago"}
-    ]},
-    {id:2,question:"Is the VP of IT the right person to engage first or should we go directly to the business unit?",askedBy:"Mid-Market AE",askedDate:"2 weeks ago",answers:[
-      {text:"Go to the business unit first, get a strong champion there, then let them pull in IT. If you start with IT they will run a full vendor evaluation that takes 3x longer.",role:"Enterprise AE",date:"2 weeks ago"}
-    ]},
-    {id:3,question:"Have you seen them do out of cycle purchases in Q2 or is Q4 really the only window?",askedBy:"AE",askedDate:"1 week ago",answers:[]}
-  ],
-  1:[
-    {id:1,question:"How strict are they about FINRA compliance documentation? Do they ask for it before or after the demo?",askedBy:"Enterprise AE",askedDate:"3 days ago",answers:[
-      {text:"Before. They will not schedule a second meeting without at minimum a SOC 2 Type II report and a completed vendor questionnaire. Have those ready before your first call.",role:"Enterprise AE",date:"2 days ago"}
-    ]},
-    {id:2,question:"Is there a way to get around the full RFP process if you have a strong internal champion?",askedBy:"Strategic AE",askedDate:"1 week ago",answers:[
-      {text:"Technically yes if the deal is under $100K and the business unit VP sponsors it directly. Above that threshold procurement takes over regardless of champion strength.",role:"Enterprise AE",date:"6 days ago"},
-      {text:"We had a C-suite champion and still got pulled into a full RFP at $150K. The $100K threshold is real.",role:"AE",date:"5 days ago"}
-    ]}
-  ],
-  2:[
-    {id:1,question:"Does the CRO actually have authority to sign without finance involvement?",askedBy:"AE",askedDate:"4 days ago",answers:[
-      {text:"CRO can sign up to about $75K annually without finance. Above that finance reviews but it is usually a formality. I had a $90K deal signed in a week with minimal friction.",role:"AE",date:"3 days ago"}
-    ]}
-  ]
+  0:[{id:1,question:"Does their legal team accept standard SaaS liability caps or do they always push for unlimited liability?",askedBy:"Enterprise AE",askedDate:"5 days ago",answers:[{text:"They push hard for unlimited liability on data breaches specifically. We got them to accept a 2x ACV cap after 3 rounds but it took escalating to their GC directly.",role:"Strategic AE",date:"4 days ago"},{text:"Same experience. Their standard position is unlimited for IP infringement and data loss.",role:"Enterprise AE",date:"3 days ago"}]},{id:2,question:"Is the VP of IT the right person to engage first or should we go directly to the business unit?",askedBy:"Mid-Market AE",askedDate:"2 weeks ago",answers:[{text:"Go to the business unit first, get a strong champion there, then let them pull in IT.",role:"Enterprise AE",date:"2 weeks ago"}]},{id:3,question:"Have you seen them do out of cycle purchases in Q2 or is Q4 really the only window?",askedBy:"AE",askedDate:"1 week ago",answers:[]}],
+  1:[{id:1,question:"How strict are they about FINRA compliance documentation?",askedBy:"Enterprise AE",askedDate:"3 days ago",answers:[{text:"Before. They will not schedule a second meeting without at minimum a SOC 2 Type II report.",role:"Enterprise AE",date:"2 days ago"}]},{id:2,question:"Is there a way to get around the full RFP process if you have a strong internal champion?",askedBy:"Strategic AE",askedDate:"1 week ago",answers:[{text:"Technically yes if the deal is under $100K and the business unit VP sponsors it directly.",role:"Enterprise AE",date:"6 days ago"}]}],
+  2:[{id:1,question:"Does the CRO actually have authority to sign without finance involvement?",askedBy:"AE",askedDate:"4 days ago",answers:[{text:"CRO can sign up to about $75K annually without finance.",role:"AE",date:"3 days ago"}]}]
 };
 
 function simulateAccess() {
@@ -766,7 +743,6 @@ function simulateAccess() {
 
 function renderQA(companyId) {
   var questions = qaData[companyId] || [];
-
   var badge = document.getElementById("accessBadge");
   if (userHasAccess && userAccessExpiry) {
     var daysLeft = Math.ceil((userAccessExpiry - new Date()) / (1000 * 60 * 60 * 24));
@@ -774,44 +750,36 @@ function renderQA(companyId) {
   } else {
     badge.innerHTML = "<span class='access-badge access-expired'>&#128274; Submit a survey to unlock</span>";
   }
-
   document.getElementById("qaAskBox").style.display = userHasAccess ? "block" : "none";
   document.getElementById("qaAskLocked").style.display = userHasAccess ? "none" : "block";
   document.getElementById("qaAnswersGate").style.display = userHasAccess ? "none" : "block";
-
   if (questions.length === 0) {
-    document.getElementById("qaList").innerHTML = "<div style='text-align:center;padding:32px 0;color:var(--text3);font-size:14px'>" + (userHasAccess ? "No questions yet. Be the first to ask." : "Submit a survey to unlock access and ask questions.") + "</div>";
+    document.getElementById("qaList").innerHTML = "<div style='text-align:center;padding:32px 0;color:var(--text3);font-size:14px'>" + (userHasAccess ? "No questions yet. Be the first to ask." : "Submit a survey to unlock access.") + "</div>";
     return;
   }
-
   var html = "";
   for (var i = 0; i < questions.length; i++) {
     var q = questions[i];
     html += "<div class='qa-item'>";
     html += "<div class='qa-question-meta'><span class='tag tag-blue'>" + q.askedBy + "</span><span style='font-size:11px;color:var(--text3);font-family:var(--font-mono)'>" + q.askedDate + "</span></div>";
     html += "<div class='qa-question'>" + q.question + "</div>";
-
     if (userHasAccess) {
       if (q.answers.length > 0) {
         html += "<div class='qa-answers'>";
         for (var j = 0; j < q.answers.length; j++) {
-          var a = q.answers[j];
-          html += "<div class='qa-answer'><div class='qa-answer-text'>" + a.text + "</div><div class='qa-answer-meta'>" + a.role + " &middot; " + a.date + "</div></div>";
+          html += "<div class='qa-answer'><div class='qa-answer-text'>" + q.answers[j].text + "</div><div class='qa-answer-meta'>" + q.answers[j].role + " &middot; " + q.answers[j].date + "</div></div>";
         }
         html += "</div>";
       } else {
         html += "<div class='qa-no-answers'>No answers yet &mdash; be the first to respond.</div>";
       }
-      html += "<div class='qa-answer-form' id='answerForm-" + q.id + "' style='display:none'>";
-      html += "<textarea placeholder='Share what you know from your own deal experience...' id='answerText-" + q.id + "'></textarea>";
-      html += "<div class='qa-answer-form-footer'><button class='btn-sm-outline' onclick='toggleAnswerForm(" + q.id + ")'>Cancel</button><button class='btn-sm' onclick='submitAnswer(" + q.id + "," + companyId + ")'>Post Answer</button></div>";
-      html += "</div>";
+      html += "<div class='qa-answer-form' id='answerForm-" + q.id + "' style='display:none'><textarea placeholder='Share what you know from your own deal experience...' id='answerText-" + q.id + "'></textarea><div class='qa-answer-form-footer'><button class='btn-sm-outline' onclick='toggleAnswerForm(" + q.id + ")'>Cancel</button><button class='btn-sm' onclick='submitAnswer(" + q.id + "," + companyId + ")'>Post Answer</button></div></div>";
       html += "<div style='margin-top:10px'><button class='btn-sm-outline' onclick='toggleAnswerForm(" + q.id + ")'>&#43; Add your answer</button></div>";
     } else {
       if (q.answers.length > 0) {
         html += "<div class='qa-answers'>";
         for (var j = 0; j < q.answers.length; j++) {
-          html += "<div class='qa-answer-blurred'><div class='qa-answer-blur-text'>Submit a survey to read this answer from a verified rep who has sold into this account. It contains specific intelligence you cannot find anywhere else.</div><div class='qa-answer-blur-overlay'><span style='font-size:12px;color:var(--text2);font-family:var(--font-mono)'>&#128274; Submit a survey to unlock</span></div></div>";
+          html += "<div class='qa-answer-blurred'><div class='qa-answer-blur-text'>Submit a survey to read this answer from a verified rep.</div><div class='qa-answer-blur-overlay'><span style='font-size:12px;color:var(--text2);font-family:var(--font-mono)'>&#128274; Submit a survey to unlock</span></div></div>";
         }
         html += "</div>";
       } else {
@@ -838,7 +806,6 @@ function submitQuestion() {
   qaData[companyId].unshift({id:Date.now(),question:text,askedBy:"You (Verified Rep)",askedDate:"Just now",answers:[]});
   input.value = "";
   renderQA(companyId);
-  document.getElementById("qaList").scrollIntoView({behavior:"smooth"});
 }
 
 function submitAnswer(questionId, companyId) {
@@ -848,23 +815,13 @@ function submitAnswer(questionId, companyId) {
   if (!text) return;
   var questions = qaData[companyId] || [];
   for (var i = 0; i < questions.length; i++) {
-    if (questions[i].id === questionId) {
-      questions[i].answers.push({text:text,role:"You (Verified Rep)",date:"Just now"});
-      break;
-    }
+    if (questions[i].id === questionId) { questions[i].answers.push({text:text,role:"You (Verified Rep)",date:"Just now"}); break; }
   }
   renderQA(companyId);
 }
 
-function toggleMobileMenu() {
-  var menu = document.getElementById("mobileMenu");
-  menu.classList.toggle("open");
-}
-
-function closeMobileMenu() {
-  var menu = document.getElementById("mobileMenu");
-  menu.classList.remove("open");
-}
+function toggleMobileMenu() { document.getElementById("mobileMenu").classList.toggle("open"); }
+function closeMobileMenu() { document.getElementById("mobileMenu").classList.remove("open"); }
 
 function showPage(name, pushState) {
   closeMobileMenu();
@@ -875,115 +832,62 @@ function showPage(name, pushState) {
     else if (name === "survey") url = "/survey";
     else if (name === "success") url = "/success";
     else if (name === "company" && currentCompany) url = "/company/" + currentCompany.name.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
-    history.pushState({page: name, companyId: currentCompany ? currentCompany.id : null}, "", url);
+    history.pushState({page:name, companyId:currentCompany ? currentCompany.id : null}, "", url);
   }
   var pages = ["page-home","page-company","page-survey","page-success","page-leaderboard","page-howitworks"];
-  for (var i = 0; i < pages.length; i++) {
-    document.getElementById(pages[i]).style.display = "none";
-  }
-  window.scrollTo(0, 0);
-  if (name === "home") {
-    document.getElementById("page-home").style.display = "block";
-  } else if (name === "company") {
-    document.getElementById("page-company").style.display = "block";
-  } else if (name === "survey") {
-    document.getElementById("page-survey").style.display = "block";
-    renderSurvey(0);
-  } else if (name === "success") {
-    document.getElementById("page-success").style.display = "block";
-  } else if (name === "leaderboard") {
-    document.getElementById("page-leaderboard").style.display = "block";
-    renderLeaderboard();
-  } else if (name === "howitworks") {
-    document.getElementById("page-howitworks").style.display = "block";
-    renderHowItWorks();
-  }
+  for (var i = 0; i < pages.length; i++) document.getElementById(pages[i]).style.display = "none";
+  window.scrollTo(0,0);
+  if (name === "home") document.getElementById("page-home").style.display = "block";
+  else if (name === "company") document.getElementById("page-company").style.display = "block";
+  else if (name === "survey") { document.getElementById("page-survey").style.display = "block"; renderSurvey(0); }
+  else if (name === "success") document.getElementById("page-success").style.display = "block";
+  else if (name === "leaderboard") { document.getElementById("page-leaderboard").style.display = "block"; renderLeaderboard(); }
+  else if (name === "howitworks") { document.getElementById("page-howitworks").style.display = "block"; renderHowItWorks(); }
 }
 
 window.addEventListener("popstate", function(e) {
   if (e.state && e.state.page) {
-    var page = e.state.page;
-    if (page === "company" && e.state.companyId !== null) {
-      openCompany(e.state.companyId, false);
-    } else {
-      showPage(page, false);
-    }
-  } else {
-    showPage("home", false);
-  }
+    if (e.state.page === "company" && e.state.companyId !== null) openCompany(e.state.companyId, false);
+    else showPage(e.state.page, false);
+  } else showPage("home", false);
 });
 
-function renderLeaderboard() {
-  var sorted = companies.slice().sort(function(a, b) {
-    var scoreA = (a.scores.decision + a.scores.legal + a.scores.budget + a.scores.complexity) / 4;
-    var scoreB = (b.scores.decision + b.scores.legal + b.scores.budget + b.scores.complexity) / 4;
-    return scoreB - scoreA;
-  });
+function scoreColor(s) { return s >= 7.5 ? "var(--accent)" : s >= 5 ? "var(--amber)" : "var(--red)"; }
+function overallScore(c) { return ((c.scores.decision + c.scores.legal + c.scores.budget + c.scores.complexity) / 4).toFixed(1); }
+function overallClass(c) { var s = parseFloat(overallScore(c)); return s >= 7 ? "high" : s >= 5 ? "mid" : "low"; }
 
-  // Desktop table rows
+function renderLeaderboard() {
+  var sorted = companies.slice().sort(function(a,b) { return ((b.scores.decision+b.scores.legal+b.scores.budget+b.scores.complexity)/4) - ((a.scores.decision+a.scores.legal+a.scores.budget+a.scores.complexity)/4); });
   var html = "";
   for (var i = 0; i < sorted.length; i++) {
-    var c = sorted[i];
-    var overall = ((c.scores.decision + c.scores.legal + c.scores.budget + c.scores.complexity) / 4).toFixed(1);
-    var rank = i + 1;
-    var rankColor = rank === 1 ? "#f5a623" : rank === 2 ? "#8892aa" : rank === 3 ? "#b06bff" : "var(--text3)";
-    var rowBg = i % 2 === 0 ? "var(--card)" : "transparent";
-    html += "<div class='lb-row' style='display:grid;grid-template-columns:48px 1fr repeat(4,100px) 80px;padding:16px 24px;border-bottom:1px solid var(--border);align-items:center;gap:8px;background:" + rowBg + ";cursor:pointer' onclick='openCompany(" + c.id + ")'>";
+    var c = sorted[i]; var overall = ((c.scores.decision+c.scores.legal+c.scores.budget+c.scores.complexity)/4).toFixed(1); var rank = i+1;
+    var rankColor = rank===1?"#f5a623":rank===2?"#8892aa":rank===3?"#b06bff":"var(--text3)";
+    html += "<div class='lb-row' style='display:grid;grid-template-columns:48px 1fr repeat(4,100px) 80px;padding:16px 24px;border-bottom:1px solid var(--border);align-items:center;gap:8px;background:" + (i%2===0?"var(--card)":"transparent") + ";cursor:pointer' onclick='openCompany(" + c.id + ")'>";
     html += "<span style='font-family:var(--font-mono);font-size:14px;font-weight:700;color:" + rankColor + "'>" + rank + "</span>";
     html += "<div style='display:flex;align-items:center;gap:12px'><div style='width:36px;height:36px;border-radius:6px;background:var(--bg4);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:12px;font-weight:800;color:" + c.color + ";flex-shrink:0'>" + c.logo + "</div><div><div style='font-weight:600;color:var(--text);font-size:14px'>" + c.name + "</div><div style='font-size:11px;color:var(--text3);font-family:var(--font-mono)'>" + c.surveys + " surveys</div></div></div>";
     html += "<span style='font-family:var(--font-mono);font-size:13px;color:" + scoreColor(c.scores.decision) + "'>" + c.scores.decision + "</span>";
     html += "<span style='font-family:var(--font-mono);font-size:13px;color:" + scoreColor(c.scores.legal) + "'>" + c.scores.legal + "</span>";
     html += "<span style='font-family:var(--font-mono);font-size:13px;color:" + scoreColor(c.scores.budget) + "'>" + c.scores.budget + "</span>";
     html += "<span style='font-family:var(--font-mono);font-size:13px;color:" + scoreColor(c.scores.complexity) + "'>" + c.scores.complexity + "</span>";
-    html += "<span style='font-family:var(--font-mono);font-size:15px;font-weight:700;color:" + scoreColor(parseFloat(overall)) + "'>" + overall + "</span>";
-    html += "</div>";
-
-    // Mobile card version
-    var rankColorMob = rank === 1 ? "#f5a623" : rank === 2 ? "#8892aa" : rank === 3 ? "#b06bff" : "var(--text3)";
-    html += "<div class='lb-card' onclick='openCompany(" + c.id + ")'>";
-    html += "<div class='lb-card-header'>";
-    html += "<span class='lb-rank' style='color:" + rankColorMob + "'>" + rank + "</span>";
-    html += "<div style='width:40px;height:40px;border-radius:8px;background:var(--bg4);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:13px;font-weight:800;color:" + c.color + ";flex-shrink:0'>" + c.logo + "</div>";
-    html += "<div style='flex:1'><div style='font-weight:600;color:var(--text);font-size:15px'>" + c.name + "</div><div style='font-size:11px;color:var(--text3);font-family:var(--font-mono)'>" + c.surveys + " surveys</div></div>";
-    html += "<span style='font-family:var(--font-mono);font-size:20px;font-weight:700;color:" + scoreColor(parseFloat(overall)) + "'>" + overall + "</span>";
-    html += "</div>";
-    html += "<div class='lb-card-scores'>";
-    html += "<div class='lb-score-item'><div class='lb-score-label'>Decision</div><div class='lb-score-val' style='color:" + scoreColor(c.scores.decision) + "'>" + c.scores.decision + "</div></div>";
-    html += "<div class='lb-score-item'><div class='lb-score-label'>Legal</div><div class='lb-score-val' style='color:" + scoreColor(c.scores.legal) + "'>" + c.scores.legal + "</div></div>";
-    html += "<div class='lb-score-item'><div class='lb-score-label'>Budget</div><div class='lb-score-val' style='color:" + scoreColor(c.scores.budget) + "'>" + c.scores.budget + "</div></div>";
-    html += "<div class='lb-score-item'><div class='lb-score-label'>Process</div><div class='lb-score-val' style='color:" + scoreColor(c.scores.complexity) + "'>" + c.scores.complexity + "</div></div>";
-    html += "</div></div>";
+    html += "<span style='font-family:var(--font-mono);font-size:15px;font-weight:700;color:" + scoreColor(parseFloat(overall)) + "'>" + overall + "</span></div>";
+    html += "<div class='lb-card' onclick='openCompany(" + c.id + ")'><div class='lb-card-header'><span class='lb-rank' style='color:" + rankColor + "'>" + rank + "</span><div style='width:40px;height:40px;border-radius:8px;background:var(--bg4);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:13px;font-weight:800;color:" + c.color + ";flex-shrink:0'>" + c.logo + "</div><div style='flex:1'><div style='font-weight:600;color:var(--text);font-size:15px'>" + c.name + "</div><div style='font-size:11px;color:var(--text3);font-family:var(--font-mono)'>" + c.surveys + " surveys</div></div><span style='font-family:var(--font-mono);font-size:20px;font-weight:700;color:" + scoreColor(parseFloat(overall)) + "'>" + overall + "</span></div><div class='lb-card-scores'><div class='lb-score-item'><div class='lb-score-label'>Decision</div><div class='lb-score-val' style='color:" + scoreColor(c.scores.decision) + "'>" + c.scores.decision + "</div></div><div class='lb-score-item'><div class='lb-score-label'>Legal</div><div class='lb-score-val' style='color:" + scoreColor(c.scores.legal) + "'>" + c.scores.legal + "</div></div><div class='lb-score-item'><div class='lb-score-label'>Budget</div><div class='lb-score-val' style='color:" + scoreColor(c.scores.budget) + "'>" + c.scores.budget + "</div></div><div class='lb-score-item'><div class='lb-score-label'>Process</div><div class='lb-score-val' style='color:" + scoreColor(c.scores.complexity) + "'>" + c.scores.complexity + "</div></div></div></div>";
   }
   document.getElementById("leaderboardRows").innerHTML = html;
 }
 
 function renderHowItWorks() {
   var steps = [
-    {num:"01",title:"Verify your identity",body:"Sign up with your work email. We verify your domain to confirm you are a real sales rep. Your personal identity is never revealed to anyone on the platform. You are always anonymous.",color:"var(--accent)"},
-    {num:"02",title:"Submit a deal experience",body:"Complete a 5-step survey about a company you have sold to or attempted to sell to. You share what you learned about their procurement process, decision makers, legal behavior, and budget cycles.",color:"var(--blue)"},
-    {num:"03",title:"Unlock company intelligence",body:"Once your submission is verified, you unlock full access to every company profile on BuyerVue. See aggregated intel from every rep who has sold into that account before you.",color:"var(--amber)"},
-    {num:"04",title:"Go into deals with an edge",body:"Before your next call, look up the company. Find out who actually signs contracts, how long legal takes, when their budget season is, and what other reps learned the hard way so you do not have to.",color:"var(--purple)"}
+    {num:"01",title:"Verify your identity",body:"Sign up with your work email. We verify your domain to confirm you are a real sales rep. Your personal identity is never revealed. You are always anonymous.",color:"var(--accent)"},
+    {num:"02",title:"Submit a deal experience",body:"Complete a 7-section survey about a company you have sold to or attempted to sell to. You share what you learned about their procurement process, decision makers, legal behavior, and budget cycles.",color:"var(--blue)"},
+    {num:"03",title:"Unlock company intelligence",body:"Once your submission is verified, you unlock full access to every company profile on BuyerVue for 14 days.",color:"var(--amber)"},
+    {num:"04",title:"Go into deals with an edge",body:"Before your next call, look up the company. Find out who actually signs contracts, how long legal takes, when their budget season is, and what other reps learned the hard way.",color:"var(--purple)"}
   ];
   var html = "";
   for (var i = 0; i < steps.length; i++) {
-    var s = steps[i];
-    html += "<div style='display:flex;gap:28px;margin-bottom:48px;align-items:flex-start'>";
-    html += "<div style='width:56px;height:56px;border-radius:12px;border:1px solid " + s.color + ";display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:16px;font-weight:700;color:" + s.color + ";flex-shrink:0'>" + s.num + "</div>";
-    html += "<div style='padding-top:8px'><h3 style='font-family:var(--font-head);font-size:22px;font-weight:700;color:var(--text);margin-bottom:10px'>" + s.title + "</h3><p style='color:var(--text2);line-height:1.7;font-size:15px'>" + s.body + "</p></div>";
-    html += "</div>";
+    html += "<div style='display:flex;gap:28px;margin-bottom:48px;align-items:flex-start'><div style='width:56px;height:56px;border-radius:12px;border:1px solid " + steps[i].color + ";display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:16px;font-weight:700;color:" + steps[i].color + ";flex-shrink:0'>" + steps[i].num + "</div><div style='padding-top:8px'><h3 style='font-family:var(--font-head);font-size:22px;font-weight:700;color:var(--text);margin-bottom:10px'>" + steps[i].title + "</h3><p style='color:var(--text2);line-height:1.7;font-size:15px'>" + steps[i].body + "</p></div></div>";
   }
-  html += "<div style='background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:28px;margin-top:8px'>";
-  html += "<div style='font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--text);margin-bottom:16px'>What the intelligence covers</div>";
-  var coverage = [
-    "Who actually has signature authority vs who just takes meetings",
-    "How long legal and redlining typically takes and how strict they are",
-    "Which contract terms they push hardest on",
-    "Whether they insist on their own paper or accept vendor agreements",
-    "When their budget season opens and whether out-of-cycle purchases happen",
-    "Which departments add friction and which are easy to work with",
-    "What the overall buying culture looks like inside the organization",
-    "Advice from reps who have been through the process before you"
-  ];
+  html += "<div style='background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:28px;margin-top:8px'><div style='font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--text);margin-bottom:16px'>What the intelligence covers</div>";
+  var coverage = ["Who actually has signature authority vs who just takes meetings","How long legal and redlining typically takes and how strict they are","Which contract terms they push hardest on","Whether they insist on their own paper or accept vendor agreements","When their budget season opens and whether out-of-cycle purchases happen","Which departments add friction and which are easy to work with","What the overall buying culture looks like inside the organization","Advice from reps who have been through the process before you"];
   for (var j = 0; j < coverage.length; j++) {
     html += "<div style='display:flex;gap:10px;margin-bottom:10px;font-size:14px;color:var(--text2);align-items:flex-start'><span style='color:var(--accent);margin-top:2px;flex-shrink:0'>&#10003;</span><span>" + coverage[j] + "</span></div>";
   }
@@ -993,39 +897,21 @@ function renderHowItWorks() {
 
 function renderCompanies(list) {
   var grid = document.getElementById("companyGrid");
-  var count = document.getElementById("resultCount");
-  count.textContent = "Showing " + list.length + (list.length === 1 ? " company" : " companies");
-  if (list.length === 0) {
-    grid.innerHTML = "<p style='color:var(--text3);padding:40px 0'>No companies found matching your search.</p>";
-    return;
-  }
+  document.getElementById("resultCount").textContent = "Showing " + list.length + (list.length === 1 ? " company" : " companies");
+  if (list.length === 0) { grid.innerHTML = "<p style='color:var(--text3);padding:40px 0'>No companies found matching your search.</p>"; return; }
   var html = "";
   for (var i = 0; i < list.length; i++) {
-    var c = list[i];
-    var overall = overallScore(c);
-    var cls = overallClass(c);
-    var dm = scoreColor(c.scores.decision);
-    var leg = scoreColor(c.scores.legal);
-    var bud = scoreColor(c.scores.budget);
-    var cmp = scoreColor(c.scores.complexity);
+    var c = list[i]; var overall = overallScore(c); var cls = overallClass(c);
     var tagHtml = "";
-    for (var t = 0; t < c.tags.length; t++) {
-      tagHtml += "<span class='tag tag-blue'>" + c.tags[t] + "</span>";
-    }
+    for (var t = 0; t < c.tags.length; t++) tagHtml += "<span class='tag tag-blue'>" + c.tags[t] + "</span>";
     html += "<div class='company-card' onclick='openCompany(" + c.id + ")'>";
-    html += "<div class='company-card-header'>";
-    html += "<div class='company-logo' style='color:" + c.color + "'>" + c.logo + "</div>";
-    html += "<div class='company-card-meta'><div class='company-name'>" + c.name + "</div><div class='company-info'>" + c.industry + " &middot; " + c.size + "</div></div>";
-    html += "<div class='score-ring score-" + cls + "'>" + overall + "</div>";
-    html += "</div>";
+    html += "<div class='company-card-header'><div class='company-logo' style='color:" + c.color + "'>" + c.logo + "</div><div class='company-card-meta'><div class='company-name'>" + c.name + "</div><div class='company-info'>" + c.industry + " &middot; " + c.size + "</div></div><div class='score-ring score-" + cls + "'>" + overall + "</div></div>";
     html += "<div class='company-card-scores'>";
-    html += "<div class='score-item'><div class='score-label'>Decision clarity</div><div class='score-bar-wrap'><div class='score-bar'><div class='score-fill' style='width:" + (c.scores.decision * 10) + "%;background:" + dm + "'></div></div><span class='score-val'>" + c.scores.decision + "</span></div></div>";
-    html += "<div class='score-item'><div class='score-label'>Legal ease</div><div class='score-bar-wrap'><div class='score-bar'><div class='score-fill' style='width:" + (c.scores.legal * 10) + "%;background:" + leg + "'></div></div><span class='score-val'>" + c.scores.legal + "</span></div></div>";
-    html += "<div class='score-item'><div class='score-label'>Budget access</div><div class='score-bar-wrap'><div class='score-bar'><div class='score-fill' style='width:" + (c.scores.budget * 10) + "%;background:" + bud + "'></div></div><span class='score-val'>" + c.scores.budget + "</span></div></div>";
-    html += "<div class='score-item'><div class='score-label'>Process ease</div><div class='score-bar-wrap'><div class='score-bar'><div class='score-fill' style='width:" + (c.scores.complexity * 10) + "%;background:" + cmp + "'></div></div><span class='score-val'>" + c.scores.complexity + "</span></div></div>";
-    html += "</div>";
-    html += "<div class='company-card-footer'><div class='card-tags'>" + tagHtml + "</div><span class='survey-count'>" + c.surveys + " surveys</span></div>";
-    html += "</div>";
+    html += "<div class='score-item'><div class='score-label'>Decision clarity</div><div class='score-bar-wrap'><div class='score-bar'><div class='score-fill' style='width:" + (c.scores.decision*10) + "%;background:" + scoreColor(c.scores.decision) + "'></div></div><span class='score-val'>" + c.scores.decision + "</span></div></div>";
+    html += "<div class='score-item'><div class='score-label'>Legal ease</div><div class='score-bar-wrap'><div class='score-bar'><div class='score-fill' style='width:" + (c.scores.legal*10) + "%;background:" + scoreColor(c.scores.legal) + "'></div></div><span class='score-val'>" + c.scores.legal + "</span></div></div>";
+    html += "<div class='score-item'><div class='score-label'>Budget access</div><div class='score-bar-wrap'><div class='score-bar'><div class='score-fill' style='width:" + (c.scores.budget*10) + "%;background:" + scoreColor(c.scores.budget) + "'></div></div><span class='score-val'>" + c.scores.budget + "</span></div></div>";
+    html += "<div class='score-item'><div class='score-label'>Process ease</div><div class='score-bar-wrap'><div class='score-bar'><div class='score-fill' style='width:" + (c.scores.complexity*10) + "%;background:" + scoreColor(c.scores.complexity) + "'></div></div><span class='score-val'>" + c.scores.complexity + "</span></div></div>";
+    html += "</div><div class='company-card-footer'><div class='card-tags'>" + tagHtml + "</div><span class='survey-count'>" + c.surveys + " surveys</span></div></div>";
   }
   grid.innerHTML = html;
 }
@@ -1062,120 +948,97 @@ function openCompany(id, pushState) {
   document.getElementById("gateCount").textContent = c.surveys;
   document.getElementById("profileGated").style.display = "block";
   document.getElementById("profileUnlocked").style.display = "none";
-
   var scoreLabels = ["Decision Clarity","Legal Ease","Budget Access","Process Ease"];
   var scoreKeys = ["decision","legal","budget","complexity"];
   var scoreSubs = ["/ 10 higher is clearer","/ 10 higher is easier","/ 10 higher is more open","/ 10 higher is simpler"];
   var sh = "";
   for (var i = 0; i < scoreLabels.length; i++) {
-    var val = c.scores[scoreKeys[i]];
-    var col = scoreColor(val);
+    var val = c.scores[scoreKeys[i]]; var col = scoreColor(val);
     sh += "<div class='profile-score-card'><div class='profile-score-card-label'>" + scoreLabels[i] + "</div><div class='profile-score-big' style='color:" + col + "'>" + val + "</div><div class='profile-score-sub'>" + scoreSubs[i] + "</div></div>";
   }
   document.getElementById("profileScoreGrid").innerHTML = sh;
-
   showPage("company", pushState);
 }
 
 function unlockProfile() {
-  var c = currentCompany;
-  if (!c) return;
+  var c = currentCompany; if (!c) return;
   document.getElementById("profileGated").style.display = "none";
   document.getElementById("profileUnlocked").style.display = "block";
-
-  // Stakeholders
   var sh = "<div class='intel-panel-title'>Decision Maker Authority Map</div><div class='intel-panel-sub'>Who actually has signature authority</div>";
   for (var i = 0; i < c.stakeholders.length; i++) {
-    var s = c.stakeholders[i];
-    var dots = "";
-    for (var d = 0; d < 5; d++) {
-      dots += "<div class='power-dot' style='background:" + (d < s.power ? s.color : "var(--border2)") + "'></div>";
-    }
+    var s = c.stakeholders[i]; var dots = "";
+    for (var d = 0; d < 5; d++) dots += "<div class='power-dot' style='background:" + (d < s.power ? s.color : "var(--border2)") + "'></div>";
     sh += "<div class='stakeholder-item'><div class='stakeholder-avatar' style='background:" + s.color + "22;color:" + s.color + "'>" + s.initials + "</div><div style='flex:1'><div class='stakeholder-title'>" + s.role + "</div><div class='stakeholder-role'>" + s.title + "</div></div><div class='power-dots'>" + dots + "</div></div>";
   }
   document.getElementById("panelStakeholders").innerHTML = sh;
-
-  // Legal
   var lh = "<div class='intel-panel-title'>Legal and Redline Process</div><div class='intel-panel-sub'>Based on " + c.surveys + " deal submissions</div>";
-  lh += "<div class='meter-labels'><span>Flexible</span><span>Very strict</span></div>";
-  lh += "<div class='meter-track'><div class='meter-fill' style='width:" + c.legalStrict + "%'></div></div>";
-  for (var i = 0; i < c.legalFacts.length; i++) {
-    lh += "<div class='intel-row'><div><div class='intel-label'>" + c.legalFacts[i].label + "</div><div class='intel-value'>" + c.legalFacts[i].value + "</div></div></div>";
-  }
+  lh += "<div class='meter-labels'><span>Flexible</span><span>Very strict</span></div><div class='meter-track'><div class='meter-fill' style='width:" + c.legalStrict + "%'></div></div>";
+  for (var i = 0; i < c.legalFacts.length; i++) lh += "<div class='intel-row'><div><div class='intel-label'>" + c.legalFacts[i].label + "</div><div class='intel-value'>" + c.legalFacts[i].value + "</div></div></div>";
   lh += "<div style='margin-top:16px;padding-top:16px;border-top:1px solid var(--border)'>";
-  for (var i = 0; i < c.redlineNotes.length; i++) {
-    lh += "<div class='note-item'><div class='note-dot'></div><span>" + c.redlineNotes[i] + "</span></div>";
-  }
+  for (var i = 0; i < c.redlineNotes.length; i++) lh += "<div class='note-item'><div class='note-dot'></div><span>" + c.redlineNotes[i] + "</span></div>";
   lh += "</div>";
   document.getElementById("panelLegal").innerHTML = lh;
-
-  // Reviews
   var rh = "<div class='intel-panel-title'>Recent Rep Submissions</div><div class='intel-panel-sub'>Anonymized, verified reps only</div>";
   for (var i = 0; i < c.reviews.length; i++) {
-    var r = c.reviews[i];
-    var rtags = "";
-    for (var t = 0; t < r.tags.length; t++) {
-      rtags += "<span class='tag " + r.tags[t] + "'>" + r.labels[t] + "</span>";
-    }
+    var r = c.reviews[i]; var rtags = "";
+    for (var t = 0; t < r.tags.length; t++) rtags += "<span class='tag " + r.tags[t] + "'>" + r.labels[t] + "</span>";
     rh += "<div class='review-card'><div class='review-header'><span class='tag tag-blue'>" + r.role + "</span><span class='review-meta'>" + r.size + " &middot; " + r.date + "</span></div><div class='review-text'>" + r.text + "</div><div class='review-tags'>" + rtags + "</div></div>";
   }
   document.getElementById("panelReviews").innerHTML = rh;
-
-  // Timeline
   var th = "<div class='intel-panel-title'>Avg Procurement Timeline</div><div class='intel-panel-sub'>From first call to signed contract</div>";
-  for (var i = 0; i < c.timeline.length; i++) {
-    var t = c.timeline[i];
-    th += "<div class='tl-item'><div class='tl-stage'>" + t.stage + "</div><div class='tl-desc'>" + t.desc + "</div><div class='tl-time'>" + t.time + "</div></div>";
-  }
+  for (var i = 0; i < c.timeline.length; i++) th += "<div class='tl-item'><div class='tl-stage'>" + c.timeline[i].stage + "</div><div class='tl-desc'>" + c.timeline[i].desc + "</div><div class='tl-time'>" + c.timeline[i].time + "</div></div>";
   document.getElementById("panelTimeline").innerHTML = th;
-
-  // Budget
   var bh = "<div class='intel-panel-title'>Budget Seasonality</div><div class='intel-panel-sub'>When deals actually close</div>";
-  var maxP = 0;
-  for (var i = 0; i < c.budget.length; i++) { if (c.budget[i].p > maxP) maxP = c.budget[i].p; }
+  var maxP = 0; for (var i = 0; i < c.budget.length; i++) { if (c.budget[i].p > maxP) maxP = c.budget[i].p; }
   for (var i = 0; i < c.budget.length; i++) {
-    var b = c.budget[i];
-    var pct = Math.round((b.p / maxP) * 100);
-    var col = b.p >= 70 ? "var(--accent)" : b.p >= 45 ? "var(--amber)" : "var(--blue)";
+    var b = c.budget[i]; var pct = Math.round((b.p/maxP)*100); var col = b.p>=70?"var(--accent)":b.p>=45?"var(--amber)":"var(--blue)";
     bh += "<div class='budget-row'><div class='budget-label'>" + b.m + "</div><div class='budget-track'><div class='budget-bar' style='width:" + pct + "%;background:" + col + "33'><span class='budget-val' style='color:" + col + "'>" + b.p + "%</span></div></div></div>";
   }
-  bh += "<div style='margin-top:12px;padding-top:12px;border-top:1px solid var(--border)'>";
-  bh += "<div class='intel-row' style='padding:6px 0;border:none'><div><div class='intel-label'>Fiscal year end</div><div class='intel-value'>" + c.fiscalYearEnd + "</div></div></div>";
-  bh += "<div class='intel-row' style='padding:6px 0;border:none'><div><div class='intel-label'>Out-of-cycle purchases</div><div class='intel-value'>" + c.outOfCycle + "</div></div></div>";
-  bh += "<div class='intel-row' style='padding:6px 0;border:none'><div><div class='intel-label'>Primary spend areas</div><div class='intel-value'>" + c.spendAreas + "</div></div></div>";
-  bh += "</div>";
+  bh += "<div style='margin-top:12px;padding-top:12px;border-top:1px solid var(--border)'><div class='intel-row' style='padding:6px 0;border:none'><div><div class='intel-label'>Fiscal year end</div><div class='intel-value'>" + c.fiscalYearEnd + "</div></div></div><div class='intel-row' style='padding:6px 0;border:none'><div><div class='intel-label'>Out-of-cycle purchases</div><div class='intel-value'>" + c.outOfCycle + "</div></div></div><div class='intel-row' style='padding:6px 0;border:none'><div><div class='intel-label'>Primary spend areas</div><div class='intel-value'>" + c.spendAreas + "</div></div></div></div>";
   document.getElementById("panelBudget").innerHTML = bh;
-
-  // Quick intel
   var qh = "<div class='intel-panel-title'>Quick Intel</div><div class='intel-panel-sub'>Aggregated from all submissions</div>";
-  for (var i = 0; i < c.quickIntel.length; i++) {
-    var q = c.quickIntel[i];
-    qh += "<div class='intel-row'><div><div class='intel-label'>" + q.label + "</div><div class='intel-value'>" + q.value + "</div></div></div>";
-  }
+  for (var i = 0; i < c.quickIntel.length; i++) qh += "<div class='intel-row'><div><div class='intel-label'>" + c.quickIntel[i].label + "</div><div class='intel-value'>" + c.quickIntel[i].value + "</div></div></div>";
   document.getElementById("panelQuick").innerHTML = qh;
-
-  // Render Q&A section
   renderQA(c.id);
 }
 
+function collectStepData(step) {
+  var def = surveyStepContent[step];
+  for (var f = 0; f < def.fields.length; f++) {
+    var field = def.fields[f];
+    if (field.type === "input" || field.type === "textarea") {
+      var el = document.getElementById("field-" + field.id);
+      if (el) surveyData[field.id] = el.value.trim();
+    } else if (field.type === "number") {
+      var el = document.getElementById("field-" + field.id);
+      if (el && el.value !== "") surveyData[field.id] = parseFloat(el.value);
+    } else if (field.type === "radio") {
+      var selected = document.querySelector(".radio-group-" + field.id + " .radio-item.selected .radio-label");
+      if (selected) surveyData[field.id] = selected.textContent;
+    } else if (field.type === "scale") {
+      var selected = document.querySelector("#scale-" + field.id + " .scale-btn.selected");
+      if (selected) surveyData[field.id] = parseInt(selected.textContent);
+    } else if (field.type === "tags") {
+      var selected = document.querySelectorAll(".tags-" + field.id + " .ctag.selected");
+      var vals = [];
+      for (var s = 0; s < selected.length; s++) vals.push(selected[s].textContent);
+      if (vals.length > 0) surveyData[field.id] = vals.join(", ");
+    }
+  }
+}
+
 function renderSurvey(step) {
+  if (step !== currentStep) collectStepData(currentStep);
   currentStep = step;
 
-  // Sidebar steps
   var stepsHtml = "";
   for (var i = 0; i < surveyStepDefs.length; i++) {
     var cls = i === step ? "s-step active" : i < step ? "s-step done" : "s-step";
-    stepsHtml += "<div class='" + cls + "' onclick='renderSurvey(" + i + ")'>";
-    stepsHtml += "<div class='s-step-num'>" + (i + 1) + "</div>";
-    stepsHtml += "<div class='s-step-label'>" + surveyStepDefs[i].label + "</div>";
-    stepsHtml += "</div>";
+    stepsHtml += "<div class='" + cls + "' onclick='renderSurvey(" + i + ")'><div class='s-step-num'>" + (i+1) + "</div><div class='s-step-label'>" + surveyStepDefs[i].label + "</div></div>";
   }
   document.getElementById("surveySteps").innerHTML = stepsHtml;
+  document.getElementById("progFill").style.width = (((step+1)/7)*100) + "%";
 
-  // Progress bar
-  document.getElementById("progFill").style.width = (((step + 1) / 5) * 100) + "%";
-
-  // Body
   var def = surveyStepContent[step];
   var html = "<div class='step-tag'>" + def.tag + "</div>";
   html += "<div class='step-title'>" + def.title + "</div>";
@@ -1188,30 +1051,34 @@ function renderSurvey(step) {
     if (field.hint) html += "<span class='form-hint'>" + field.hint + "</span>";
 
     if (field.type === "input") {
-      html += "<input class='form-input' type='text' placeholder='" + field.placeholder + "' />";
-    } else if (field.type === "select") {
-      html += "<select class='form-input'>";
-      for (var o = 0; o < field.options.length; o++) {
-        html += "<option>" + field.options[o] + "</option>";
-      }
-      html += "</select>";
+      var saved = surveyData[field.id] || "";
+      html += "<input class='form-input' id='field-" + field.id + "' type='text' placeholder='" + field.placeholder + "' value='" + saved.replace(/'/g,"&#39;") + "' />";
+    } else if (field.type === "number") {
+      var saved = surveyData[field.id] !== undefined ? surveyData[field.id] : "";
+      html += "<input class='form-input' id='field-" + field.id + "' type='number' min='0' placeholder='" + field.placeholder + "' value='" + saved + "' />";
+    } else if (field.type === "textarea") {
+      var saved = surveyData[field.id] || "";
+      html += "<textarea class='form-input' id='field-" + field.id + "' placeholder='" + field.placeholder + "'>" + saved + "</textarea>";
     } else if (field.type === "radio") {
+      html += "<div class='radio-group-" + field.id + "'>";
       for (var o = 0; o < field.options.length; o++) {
-        html += "<div class='radio-item' onclick='selectRadio(this)'><div class='radio-dot'></div><span class='radio-label'>" + field.options[o] + "</span></div>";
-      }
-    } else if (field.type === "scale") {
-      html += "<div class='scale-group' id='" + field.id + "'>";
-      for (var n = 1; n <= 5; n++) {
-        html += "<div class='scale-btn' onclick='selectScale(this, \"" + field.id + "\")'>" + n + "</div>";
+        var isSel = surveyData[field.id] === field.options[o];
+        html += "<div class='radio-item" + (isSel?" selected":"") + "' onclick='selectRadio(this)'><div class='radio-dot'></div><span class='radio-label'>" + field.options[o] + "</span></div>";
       }
       html += "</div>";
-      html += "<div class='scale-labels'><span>" + field.min + "</span><span>" + field.max + "</span></div>";
-    } else if (field.type === "textarea") {
-      html += "<textarea class='form-input' placeholder='" + field.placeholder + "'></textarea>";
+    } else if (field.type === "scale") {
+      html += "<div class='scale-group' id='scale-" + field.id + "'>";
+      for (var n = 1; n <= field.steps; n++) {
+        var isSel = surveyData[field.id] === n;
+        html += "<div class='scale-btn" + (isSel?" selected":"") + "' onclick='selectScale(this, \"scale-" + field.id + "\")'>" + n + "</div>";
+      }
+      html += "</div><div class='scale-labels'><span>" + field.min + "</span><span>" + field.max + "</span></div>";
     } else if (field.type === "tags") {
-      html += "<div class='ctag-group'>";
+      var savedTags = surveyData[field.id] ? surveyData[field.id].split(", ") : [];
+      html += "<div class='ctag-group tags-" + field.id + "'>";
       for (var t = 0; t < field.tags.length; t++) {
-        html += "<span class='ctag' onclick='this.classList.toggle(\"selected\")'>" + field.tags[t] + "</span>";
+        var isSel = savedTags.indexOf(field.tags[t]) > -1;
+        html += "<span class='ctag" + (isSel?" selected":"") + "' onclick='this.classList.toggle(\"selected\")'>" + field.tags[t] + "</span>";
       }
       html += "</div>";
     }
@@ -1219,14 +1086,14 @@ function renderSurvey(step) {
   }
 
   html += "<div class='form-actions'>";
-  if (step > 0) html += "<button class='btn-back' onclick='renderSurvey(" + (step - 1) + ")'>&#8592; Back</button>";
+  if (step > 0) html += "<button class='btn-back' onclick='renderSurvey(" + (step-1) + ")'>&#8592; Back</button>";
   else html += "<div></div>";
-  if (step < 4) html += "<button class='btn-next' onclick='renderSurvey(" + (step + 1) + ")'>Continue &#8594;</button>";
-  else html += "<button class='btn-next' onclick='simulateAccess();showPage(\"success\")'>Submit Intelligence &#8594;</button>";
+  if (step < 6) html += "<button class='btn-next' onclick='renderSurvey(" + (step+1) + ")'>Continue &#8594;</button>";
+  else html += "<button class='btn-next' onclick='collectStepData(6);submitToAirtable()'>Submit Intelligence &#8594;</button>";
   html += "</div>";
 
   document.getElementById("surveyBody").innerHTML = html;
-  window.scrollTo(0, 0);
+  window.scrollTo(0,0);
 }
 
 function selectRadio(el) {
@@ -1241,9 +1108,8 @@ function selectScale(el, groupId) {
   el.classList.add("selected");
 }
 
-// Init
 renderCompanies(companies);
-history.replaceState({page:"home", companyId:null}, "", "/");
+history.replaceState({page:"home",companyId:null}, "", "/");
 </script>
 </body>
 </html>
