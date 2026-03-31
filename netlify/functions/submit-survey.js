@@ -18,6 +18,8 @@ exports.handler = async function(event, context) {
     return { statusCode: 400, body: JSON.stringify({ error: "Invalid JSON" }) };
   }
 
+  console.log("Fields being sent to Airtable:", JSON.stringify(fields, null, 2));
+
   try {
     const response = await fetch(
       "https://api.airtable.com/v0/" + BASE_ID + "/" + encodeURIComponent(TABLE_NAME),
@@ -32,8 +34,10 @@ exports.handler = async function(event, context) {
     );
 
     const data = await response.json();
+    console.log("Airtable response:", JSON.stringify(data, null, 2));
 
     if (!response.ok) {
+      console.log("Airtable error:", JSON.stringify(data, null, 2));
       return { statusCode: response.status, body: JSON.stringify({ error: data }) };
     }
 
@@ -43,6 +47,7 @@ exports.handler = async function(event, context) {
       body: JSON.stringify({ success: true, id: data.id })
     };
   } catch (err) {
+    console.log("Fetch error:", err.message);
     return { statusCode: 500, body: JSON.stringify({ error: err.message }) };
   }
 };
