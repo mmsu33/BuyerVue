@@ -513,7 +513,7 @@ var surveyStepContent = [
     fields:[
       {type:"number",id:"meeting_participant_count",label:"How many people were involved in direct meetings with you during the sales process?",placeholder:"Enter a number"},
       {type:"radio",id:"dm_seniority",label:"What was the seniority level of the final decision maker?",options:["Manager","Director","VP","SVP","C-Suite","CEO / President","Board level"]},
-      {type:"radio",id:"dm_department",label:"What department did the final decision maker sit in?",options:["IT / Engineering","Finance","Legal","Procurement","Business Unit","C-Suite Office","HR","Security"]},
+      {type:"radio",id:"dm_department",label:"What department did the final decision maker sit in?",options:["IT / Engineering","Security / InfoSec","Product","Sales","RevOps / GTM","Marketing","Customer Success","Operations","Finance","Legal","Procurement","HR / People","C-Suite Office"]},
       {type:"radio",id:"competing_vendors",label:"How many competing vendors were evaluated alongside you?",options:["None","1","2-3","4-5","6+","Unknown"]}
     ]
   },
@@ -923,8 +923,8 @@ function collectStepData(step) {
     } else if (field.type === "tags") {
       var selected = document.querySelectorAll(".tags-" + field.id + " .ctag.selected");
       var vals = [];
-      for (var s = 0; s < selected.length; s++) vals.push(selected[s].textContent);
-      if (vals.length > 0) surveyData[field.id] = vals.join(", ");
+      for (var s = 0; s < selected.length; s++) vals.push(selected[s].textContent.trim());
+      if (vals.length > 0) surveyData[field.id] = vals;
     }
   }
 }
@@ -976,7 +976,7 @@ function renderSurvey(step) {
       }
       html += "</div><div class='scale-labels'><span>" + field.min + "</span><span>" + field.max + "</span></div>";
     } else if (field.type === "tags") {
-      var savedTags = surveyData[field.id] ? surveyData[field.id].split(", ") : [];
+      var savedTags = Array.isArray(surveyData[field.id]) ? surveyData[field.id] : [];
       html += "<div class='ctag-group tags-" + field.id + "'>";
       for (var t = 0; t < field.tags.length; t++) {
         var isSel = savedTags.indexOf(field.tags[t]) > -1;
