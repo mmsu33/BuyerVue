@@ -490,115 +490,56 @@ var isSubmitting = false;
 
 var surveyStepDefs = [
   {label:"Deal Context"},
-  {label:"Decision Maker Intel"},
-  {label:"Responsiveness & Ghosting"},
-  {label:"Procurement & Legal"},
-  {label:"Budget & Spend"},
-  {label:"Sales Cycle Metrics"},
-  {label:"Outcome & Signals"}
+  {label:"Decision Maker & Competition"},
+  {label:"Process & Legal"},
+  {label:"Intel & Outcome"}
 ];
 
 var surveyStepContent = [
   {
-    tag:"Step 1 of 7",title:"Deal Context",
+    tag:"Step 1 of 4",title:"Deal Context",
     sub:"Establishes the baseline so every submission is comparable across companies and time periods.",
     fields:[
       {type:"input",id:"company_website",label:"What is the website of the company you sold to?",placeholder:"e.g. salesforce.com"},
-      {type:"radio",id:"rep_role",label:"What was your role at the time?",options:["Account Executive","Enterprise AE","Strategic Account Manager","SDR","VP of Sales","Founder / CEO","Other"]},
-      {type:"radio",id:"deal_quarter",label:"What year and quarter did this deal reach its furthest stage?",options:["Q1 2024","Q2 2024","Q3 2024","Q4 2024","Q1 2025","Q2 2025","Q3 2025","Q4 2025","Q1 2026","Q2 2026"]},
+      {type:"radio",id:"deal_quarter",label:"What year and quarter did this deal reach its furthest stage?",options:["Q1 2025","Q2 2025","Q3 2025","Q4 2025","Q1 2026","Q2 2026"]},
       {type:"radio",id:"acv_range",label:"What was the approximate annual contract value?",options:["Under $10K","$10K-$50K","$50K-$100K","$100K-$250K","$250K-$500K","$500K-$1M","$1M+"]},
       {type:"radio",id:"product_category",label:"What category of product or service were you selling?",options:["Software / SaaS","Hardware","Professional Services","Data / Analytics","Security","Infrastructure","Other"]},
-      {type:"radio",id:"deal_outcome",label:"What was the deal outcome?",options:["Closed Won","Closed Lost","No Decision","Ghosted","Still Active"]},
-      {type:"radio",id:"entry_motion",label:"How did you initially get into this account?",options:["Cold outbound","Inbound lead","Referral","Existing relationship","Partner / channel"]},
-      {type:"radio",id:"prior_relationship",label:"Had you sold to this company before?",options:["Yes","No"]}
+      {type:"radio",id:"deal_outcome",label:"What was the deal outcome?",options:["Closed Won","Closed Lost","No Decision","Ghosted","Still Active"]}
     ]
   },
   {
-    tag:"Step 2 of 7",title:"Decision Maker Intelligence",
-    sub:"Help future reps know who actually has authority before wasting meetings on the wrong people.",
+    tag:"Step 2 of 4",title:"Decision Maker & Competition",
+    sub:"Help future reps know who actually has authority and what they are walking into.",
     fields:[
       {type:"number",id:"meeting_participant_count",label:"How many people were involved in direct meetings with you during the sales process?",placeholder:"Enter a number"},
-      {type:"number",id:"budget_authority_count",label:"How many of those people had actual budget authority?",placeholder:"Enter a number"},
       {type:"radio",id:"dm_seniority",label:"What was the seniority level of the final decision maker?",options:["Manager","Director","VP","SVP","C-Suite","CEO / President","Board level"]},
       {type:"radio",id:"dm_department",label:"What department did the final decision maker sit in?",options:["IT / Engineering","Finance","Legal","Procurement","Business Unit","C-Suite Office","HR","Security"]},
-      {type:"radio",id:"poc_authority",label:"Did your initial point of contact have final signature authority?",options:["Yes","No, someone above them signed","No, it went to a committee","No, procurement took over"]},
-      {type:"radio",id:"dm_access_stage",label:"At what point did you first get access to the actual decision maker?",options:["Before demo","During demo","Post demo","During legal","Never got direct access"]},
-
-      {type:"radio",id:"rfp_type",label:"Was a formal vendor scoring or RFP process required?",options:["No formal process","Informal internal review","Formal RFP with scoring","Full sourcing / procurement RFP"]},
       {type:"radio",id:"competing_vendors",label:"How many competing vendors were evaluated alongside you?",options:["None","1","2-3","4-5","6+","Unknown"]}
     ]
   },
   {
-    tag:"Step 3 of 7",title:"Responsiveness & Ghosting",
-    sub:"Unique to BuyerVue. Maps communication behavior by company to help reps know what to expect.",
-    fields:[
-      {type:"radio",id:"avg_response_time",label:"On average how many hours did your main point of contact take to respond to emails?",options:["Under 4 hours","4-24 hours","1-3 days","3-7 days","7+ days","Inconsistent"]},
-      {type:"radio",id:"ghost_count",label:"How many times were you ghosted for 7 or more days during this deal?",options:["0","1","2","3","4+"]},
-      {type:"radio",id:"ghost_stage",label:"At what stage did ghosting most commonly occur?",options:["Never ghosted","Early discovery","Post demo","Post proposal","During legal / IT review","Post verbal commit"]},
-      {type:"radio",id:"followup_count",label:"How many follow-up attempts did it typically take to get a response after going dark?",options:["1","2","3","4","5+","Never responded"]},
-      {type:"radio",id:"responsiveness_trend",label:"Did responsiveness get better or worse as the deal progressed?",options:["Got more responsive","Stayed consistent","Got less responsive","Went completely dark"]},
-      {type:"scale",id:"communication_quality",label:"How would you rate the overall communication quality of this buying team?",min:"Terrible",max:"Excellent",steps:5}
-    ]
-  },
-  {
-    tag:"Step 4 of 7",title:"Procurement & Legal",
+    tag:"Step 3 of 4",title:"Process & Legal",
     sub:"Legal cycles can kill deals or drag timelines by weeks. Help reps know what to expect.",
     fields:[
+      {type:"scale",id:"communication_quality",label:"How would you rate the overall communication quality of this buying team?",min:"Terrible",max:"Excellent",steps:5},
       {type:"radio",id:"procurement_involvement",label:"Was a formal procurement or sourcing team involved?",options:["No","Yes, only to help facilitate","Yes, involved in pricing only","Yes, heavily involved throughout","Yes, they ran the entire process"]},
-      {type:"radio",id:"vendor_registration",label:"Was a vendor registration or onboarding process required?",options:["Yes","No"]},
       {type:"radio",id:"security_review",label:"Was a security or IT risk assessment required?",options:["Yes","No"]},
       {type:"number",id:"security_review_weeks",label:"If yes, how many weeks did the security review take?",placeholder:"Enter weeks (0 if not applicable)"},
       {type:"radio",id:"legal_review_required",label:"Was a legal review required?",options:["Yes","No"]},
       {type:"number",id:"legal_review_weeks",label:"If yes, how many weeks did legal review and redlining take?",placeholder:"Enter weeks (0 if not applicable)"},
-      {type:"number",id:"redline_rounds",label:"How many rounds of redlines were there?",placeholder:"Enter a number"},
-      {type:"radio",id:"contract_paper",label:"Whose contract paper was used?",options:["Ours","Theirs","Negotiated hybrid","No formal contract"]},
       {type:"scale",id:"contract_flexibility",label:"How would you rate their flexibility on contract terms?",min:"Completely rigid",max:"Very flexible",steps:5},
-      {type:"tags",id:"contested_terms",label:"Which contract terms did they push hardest on?",hint:"Select all that apply",tags:["Liability caps","IP ownership","Data privacy / DPA","SLA / uptime","Termination for convenience","Auto-renewal","Indemnification","Governing law","Payment terms","Price escalation"]},
-      {type:"radio",id:"price_reduction",label:"Did procurement attempt to reduce the price after legal negotiations began?",options:["No","Yes, once","Yes, multiple times"]},
-      {type:"radio",id:"procurement_portal",label:"Did they use a procurement portal?",options:["No","Coupa","SAP Ariba","Jaggaer","Oracle Procurement","Other"]},
-      {type:"radio",id:"insurance_required",label:"Were specific insurance minimums or certifications required?",options:["Yes","No"]}
+      {type:"radio",id:"poc_required",label:"Was a pilot or proof of concept required before budget was committed?",options:["No","Optional POC","Required POC","Required POC with formal scoring"]}
     ]
   },
   {
-    tag:"Step 5 of 7",title:"Budget & Spend Intelligence",
-    sub:"Budget timing intel separates reps who close from reps who get told maybe next quarter forever.",
+    tag:"Step 4 of 4",title:"Intel & Outcome",
+    sub:"The intelligence that will help the next rep go in prepared.",
     fields:[
-      {type:"radio",id:"budget_preallocated",label:"Was budget pre-allocated for this purchase before you engaged?",options:["Yes, fully allocated","Partially allocated","No budget existed","Unknown"]},
-      {type:"radio",id:"deal_fiscal_quarter",label:"What quarter of their fiscal year did the deal close or progress furthest?",options:["Q1","Q2","Q3","Q4"]},
-      {type:"scale",id:"offcycle_willingness",label:"How willing were they to spend outside of normal budget cycles?",min:"Never, hard rules",max:"Very willing anytime",steps:5},
-      {type:"radio",id:"approval_threshold",label:"What was the approval threshold above which additional sign-offs were required?",options:["Under $10K","$10K-$50K","$50K-$100K","$100K-$250K","$250K+","Unknown"]},
-      {type:"radio",id:"business_case",label:"Was a formal business case or ROI document required?",options:["No","Informal justification","Formal written business case","Board level approval required"]},
-      {type:"radio",id:"poc_required",label:"Was a pilot or proof of concept required before budget was committed?",options:["No","Optional POC","Required POC","Required POC with formal scoring"]},
-      {type:"number",id:"poc_weeks",label:"If a POC was required how many weeks did it last?",placeholder:"Enter weeks (0 if not applicable)"},
       {type:"radio",id:"budget_category",label:"Which area of the business was this purchase primarily categorized under?",options:["IT / Infrastructure","Security","Sales / GTM","Marketing","Finance / ERP","HR / People","Data / Analytics","AI / Automation","Compliance","Customer Experience","Engineering / Dev"]},
       {type:"tags",id:"negotiated_concessions",label:"What concessions did the client negotiate?",hint:"Select all that apply",tags:["Price reduction","Extended payment terms","Additional seats / licenses at no cost","Free implementation / onboarding","Enhanced SLA / uptime guarantee","Added professional services","Contract term reduction","Termination for convenience clause","Price lock / no escalation clause","Pilot at reduced cost","Custom security or compliance terms","Other"]},
       {type:"radio",id:"company_spend_mode",label:"Did the company appear to be in growth mode, stable mode, or cost-cutting mode?",options:["Aggressive growth","Moderate growth","Stable / maintaining","Cost-cutting","Significant cost-cutting / layoffs"]},
-      {type:"radio",id:"preferred_vendor_list",label:"Did they have a preferred vendor list and were you on it?",options:["No preferred list","Yes and we were on it","Yes and we were not on it","Unknown"]}
-    ]
-  },
-  {
-    tag:"Step 6 of 7",title:"Sales Cycle Metrics",
-    sub:"Pure quantitative benchmarks that help reps forecast and plan.",
-    fields:[
-      {type:"number",id:"wks_contact_to_meeting",label:"How many weeks from first contact to first meeting?",placeholder:"Enter weeks"},
-      {type:"number",id:"wks_meeting_to_proposal",label:"How many weeks from first meeting to proposal submitted?",placeholder:"Enter weeks"},
-      {type:"number",id:"wks_proposal_to_verbal",label:"How many weeks from proposal to verbal agreement?",placeholder:"Enter weeks"},
-      {type:"number",id:"wks_verbal_to_signed",label:"How many weeks from verbal agreement to signed contract?",placeholder:"Enter weeks"},
       {type:"number",id:"total_cycle_weeks",label:"How many total weeks was the full sales cycle?",placeholder:"Enter weeks"},
-      {type:"radio",id:"total_meetings",label:"How many in-person or video meetings took place in total?",options:["1-2","3-5","6-10","11-20","20+"]},
-      {type:"radio",id:"deal_size_change",label:"Did the deal size change from initial proposal to final signature?",options:["Stayed the same","Increased","Decreased less than 10%","Decreased 10-25%","Decreased more than 25%"]}
-    ]
-  },
-  {
-    tag:"Step 7 of 7",title:"Outcome & Predictive Signals",
-    sub:"Creates the longitudinal and predictive data that becomes more powerful as submissions accumulate.",
-    fields:[
-      {type:"radio",id:"loss_reason",label:"If lost, what was the primary reason?",options:["Lost to competitor","No decision","Budget cut","Champion left","Product fit","Price","Legal could not agree","Timing","Unknown","N/A - deal was won"]},
-      {type:"radio",id:"win_factor",label:"If won, what was the single biggest factor?",options:["Product superiority","Price","Relationship","Executive alignment","Timing","POC results","Referral","Incumbent disadvantage","N/A - deal was lost"]},
       {type:"scale",id:"sell_complexity",label:"Rate the overall complexity of selling to this company from 1 to 10",min:"Very easy",max:"Extremely complex",steps:10},
-      {type:"radio",id:"would_pursue_again",label:"Would you pursue this account again?",options:["Yes immediately","Yes with better preparation","Only for the right deal size","Probably not","Definitely not"]},
-      {type:"scale",id:"rep_recommendation",label:"How likely are you to recommend this company as a target to a fellow rep?",min:"Would not recommend",max:"Highly recommend",steps:5},
-      {type:"radio",id:"tech_stack_mode",label:"Did this company appear to be actively expanding their tech stack?",options:["Yes aggressively","Yes moderately","Stable / maintaining","Consolidating / cutting vendors"]},
       {type:"textarea",id:"top_rep_tip",label:"What is the single most important thing a rep should know before engaging this company?",hint:"Your most valuable insight. This will be displayed on the company profile.",placeholder:"e.g. Map the org before your first demo. The VP of IT says yes but the CISO will kill the deal if not looped in early..."}
     ]
   }
@@ -608,74 +549,36 @@ var surveyStepContent = [
 function buildAirtableFields(data) {
   var fields = {};
   var map = {
-    "rep_role": "Rep Role",
+    "company_website": "Company Website",
     "deal_quarter": "Deal Quarter",
     "acv_range": "ACV Range",
     "product_category": "Product Category",
     "deal_outcome": "Deal Outcome",
-    "entry_motion": "Entry Motion",
-    "prior_relationship": "Prior Relationship",
     "meeting_participant_count": "Meeting Participant Count",
-    "budget_authority_count": "Budget Authority Count",
     "dm_seniority": "DM Seniority Level",
     "dm_department": "DM Department",
-    "poc_authority": "POC Had Signature Authority",
-    "dm_access_stage": "DM Access Stage",
-    "rfp_type": "RFP Process Type",
     "competing_vendors": "Competing Vendor Count",
-    "avg_response_time": "Avg Email Response Time",
-    "ghost_count": "Ghost Count (7+ days)",
-    "ghost_stage": "Primary Ghost Stage",
-    "followup_count": "Follow-ups to Re-engage",
-    "responsiveness_trend": "Responsiveness Trend",
     "communication_quality": "Communication Quality",
     "procurement_involvement": "Procurement Involvement",
-    "vendor_registration": "Vendor Registration Required",
     "security_review": "Security Review Required",
     "security_review_weeks": "Security Review Duration (Wks)",
     "legal_review_required": "Legal Review Required",
     "legal_review_weeks": "Legal Review Duration (Wks)",
-    "redline_rounds": "Redline Rounds",
-    "contract_paper": "Contract Paper",
     "contract_flexibility": "Contract Flexibility",
-    "contested_terms": "Contested Contract Terms",
-    "price_reduction": "Procurement Price Reduction",
-    "procurement_portal": "Procurement Portal",
-    "insurance_required": "Insurance Certs Required",
-    "budget_preallocated": "Budget Pre-Allocated",
-    "deal_fiscal_quarter": "Deal Fiscal Quarter",
-    "offcycle_willingness": "Off-Cycle Spend Willingness",
-    "approval_threshold": "Budget Approval Threshold",
-    "business_case": "Business Case Required",
     "poc_required": "POC Required",
-    "poc_weeks": "POC Duration (Wks)",
     "budget_category": "Budget Category",
     "negotiated_concessions": "Negotiated Concessions",
     "company_spend_mode": "Company Spend Mode",
-    "preferred_vendor_list": "Preferred Vendor List Status",
-    "wks_contact_to_meeting": "Wks Contact to Meeting",
-    "wks_meeting_to_proposal": "Wks Meeting to Proposal",
-    "wks_proposal_to_verbal": "Wks Proposal to Verbal",
-    "wks_verbal_to_signed": "Wks Verbal to Signed",
     "total_cycle_weeks": "Total Cycle Weeks",
-    "total_meetings": "Total Meeting Count",
-    "deal_size_change": "Deal Size Change",
-    "loss_reason": "Primary Loss Reason",
-    "win_factor": "Primary Win Factor",
     "sell_complexity": "Sell Complexity (1-10)",
-    "would_pursue_again": "Would Pursue Again",
-    "rep_recommendation": "Rep Recommendation Score",
-    "tech_stack_mode": "Tech Stack Mode",
-    "top_rep_tip": "Top Rep Tip",
-    "company_website": "Company Website"
+    "top_rep_tip": "Top Rep Tip"
   };
 
   for (var key in map) {
     if (data[key] !== undefined && data[key] !== "" && data[key] !== null) {
       var airtableField = map[key];
       var val = data[key];
-      // Number fields
-      var numberFields = ["meeting_participant_count","budget_authority_count","security_review_weeks","legal_review_weeks","redline_rounds","poc_weeks","wks_contact_to_meeting","wks_meeting_to_proposal","wks_proposal_to_verbal","wks_verbal_to_signed","total_cycle_weeks","communication_quality","contract_flexibility","offcycle_willingness","sell_complexity","rep_recommendation"];
+      var numberFields = ["meeting_participant_count","security_review_weeks","legal_review_weeks","total_cycle_weeks","communication_quality","contract_flexibility","sell_complexity"];
       if (numberFields.indexOf(key) > -1) {
         var n = parseFloat(val);
         if (!isNaN(n)) fields[airtableField] = n;
@@ -1036,7 +939,7 @@ function renderSurvey(step) {
     stepsHtml += "<div class='" + cls + "' onclick='renderSurvey(" + i + ")'><div class='s-step-num'>" + (i+1) + "</div><div class='s-step-label'>" + surveyStepDefs[i].label + "</div></div>";
   }
   document.getElementById("surveySteps").innerHTML = stepsHtml;
-  document.getElementById("progFill").style.width = (((step+1)/7)*100) + "%";
+  document.getElementById("progFill").style.width = (((step+1)/4)*100) + "%";
 
   var def = surveyStepContent[step];
   var html = "<div class='step-tag'>" + def.tag + "</div>";
@@ -1087,8 +990,8 @@ function renderSurvey(step) {
   html += "<div class='form-actions'>";
   if (step > 0) html += "<button class='btn-back' onclick='renderSurvey(" + (step-1) + ")'>&#8592; Back</button>";
   else html += "<div></div>";
-  if (step < 6) html += "<button class='btn-next' onclick='renderSurvey(" + (step+1) + ")'>Continue &#8594;</button>";
-  else html += "<button class='btn-next' onclick='collectStepData(6);submitToAirtable()'>Submit Intelligence &#8594;</button>";
+  if (step < 3) html += "<button class='btn-next' onclick='renderSurvey(" + (step+1) + ")'>Continue &#8594;</button>";
+  else html += "<button class='btn-next' onclick='collectStepData(3);submitToAirtable()'>Submit Intelligence &#8594;</button>";
   html += "</div>";
 
   document.getElementById("surveyBody").innerHTML = html;
