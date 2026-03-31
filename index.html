@@ -523,7 +523,7 @@ var surveyStepContent = [
       {type:"radio",id:"dm_department",label:"What department did the final decision maker sit in?",options:["IT / Engineering","Finance","Legal","Procurement","Business Unit","C-Suite Office","HR","Security"]},
       {type:"radio",id:"poc_authority",label:"Did your initial point of contact have final signature authority?",options:["Yes","No, someone above them signed","No, it went to a committee","No, procurement took over"]},
       {type:"radio",id:"dm_access_stage",label:"At what point did you first get access to the actual decision maker?",options:["Before demo","During demo","Post demo","During legal","Never got direct access"]},
-      {type:"radio",id:"dm_change_count",label:"How many times did the key decision maker change during the process?",options:["0","1","2","3+"]},
+
       {type:"radio",id:"rfp_type",label:"Was a formal vendor scoring or RFP process required?",options:["No formal process","Informal internal review","Formal RFP with scoring","Full sourcing / procurement RFP"]},
       {type:"radio",id:"competing_vendors",label:"How many competing vendors were evaluated alongside you?",options:["None","1","2-3","4-5","6+","Unknown"]}
     ]
@@ -621,7 +621,6 @@ function buildAirtableFields(data) {
     "dm_department": "DM Department",
     "poc_authority": "POC Had Signature Authority",
     "dm_access_stage": "DM Access Stage",
-    "dm_change_count": "DM Change Count",
     "rfp_type": "RFP Process Type",
     "competing_vendors": "Competing Vendor Count",
     "avg_response_time": "Avg Email Response Time",
